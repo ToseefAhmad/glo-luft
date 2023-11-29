@@ -1,0 +1,9 @@
+@import '../../scss/variables';
+
+.app {
+    .city-control-component {
+        .form-control-component {
+            height: $form-control-height;
+        }
+    }
+}

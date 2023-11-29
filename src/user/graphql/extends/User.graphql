@@ -1,0 +1,7 @@
+extend type User {
+    """
+    [user][GLO]
+    User Name Prefix
+    """
+    prefix: String
+}

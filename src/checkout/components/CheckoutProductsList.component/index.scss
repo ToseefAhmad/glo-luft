@@ -1,0 +1,98 @@
+@import '../../../common/scss/variables';
+@import '../../../common/scss/mixins';
+@import '~bat-core/checkout/src/components/CheckoutProductsListItem.component/styles/glo/index';
+@import '../../../product/components/ProductSale.component/index';
+@import '../../../product/components/ProductQty.component/index';
+@import '../../../product/components/VariationAttribute.component/index';
+@import '../../../product/components/ConfigurableProductPlainOptions.component/index';
+
+.checkout-products-list-component {
+    $icon-size: 1.8rem;
+    $icon-margin: 0 $m-secondary 0 1.7rem;
+    $scroll-bar-width: 0.8rem;
+    $product-item-height: 15.5rem;
+    $products-item-padding-right: 1.5rem;
+    $products-list-max-height: 2 * $product-item-height;
+    $products-padding: 2.4rem $p-secondary $p-primary $p-primary;
+    $product-sku-margin-bottom: 1.5rem;
+    $product-item-font-size: 1.8rem;
+
+    & {
+        background: $light;
+        padding: $products-padding;
+        margin-bottom: $m-primary;
+    }
+
+    &-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &-header-inner {
+        display: flex;
+        align-items: center;
+    }
+
+    &-count {
+        font-size: $font-size-md;
+        font-weight: $font-weight-bold;
+        text-transform: capitalize;
+    }
+
+    &-body {
+        margin-top: $m-primary;
+    }
+
+    &-body::before {
+        display: block;
+        content: '';
+        border-top: $border-width solid $gray-light-primary;
+        margin: 0 $m-secondary $m-primary 0;
+    }
+
+    &-body-hidden {
+        display: none;
+    }
+
+    &-list {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        max-height: $products-list-max-height;
+
+        @include scrollable-list-media-all(
+            '.checkout-info-component-products-item',
+            $scroll-bar-width: $scroll-bar-width
+        );
+    }
+
+    &-item {
+        padding-right: $products-item-padding-right;
+        overflow: hidden;
+    }
+
+    &-item:not(:last-child) {
+        margin-bottom: $m-primary;
+
+        .checkout-products-list-item-component {
+            padding-bottom: $p-primary;
+            border-bottom: $border-width solid $gray-light-primary;
+        }
+    }
+
+    &-toggle-icon {
+        width: $icon-size;
+        height: $icon-size;
+        background-image: url('~bat-core/common/src/resources/svg/base/bat-increment.svg');
+        background-size: $icon-size $icon-size;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        align-self: flex-end;
+        margin: $icon-margin;
+    }
+
+    &-toggle-icon-active {
+        background-image: url('~bat-core/common/src/resources/svg/base/bat-decrement.svg');
+    }
+}

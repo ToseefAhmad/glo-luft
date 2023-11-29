@@ -1,0 +1,19 @@
+@import '../../../common/scss/variables';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(md) {
+    .category-page {
+        &-header {
+            padding: 0 $p-primary;
+        }
+
+        &-top-bar {
+            position: relative;
+            padding: $p-primary $p-primary-lg;
+        }
+
+        .product-list-component {
+            padding: 0 $p-primary-lg $p-primary-lg;
+        }
+    }
+}

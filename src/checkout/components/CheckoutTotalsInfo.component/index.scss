@@ -1,0 +1,12 @@
+@import '../../../common/scss/variables';
+
+.checkout-totals-info-component {
+    $totals-font-size: 1.4rem;
+    $totals-font-line-height: 1.8rem;
+
+    & {
+        font-size: $totals-font-size;
+        font-weight: $font-weight-bold;
+        line-height: $totals-font-line-height;
+    }
+}

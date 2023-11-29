@@ -1,0 +1,20 @@
+.app {
+    .toast-component {
+        $toast-width: 24.5rem;
+        $progress-bar-width: 2.5rem;
+        $close-button-bg-size: .9rem auto;
+
+        & {
+            width: $toast-width;
+        }
+
+        &-progress-bar {
+            width: $progress-bar-width;
+        }
+
+        &-item .Toastify__close-button {
+            background: url('../../resources/svg/bat-close-toast.svg') 50% 50% no-repeat;
+            background-size: $close-button-bg-size;
+        }
+    }
+}

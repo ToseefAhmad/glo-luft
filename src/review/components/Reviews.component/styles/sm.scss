@@ -1,0 +1,56 @@
+@import '../../../../common/scss/variables';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(sm) {
+    .app {
+        .reviews-component {
+            $empty-review-top-padding: 5rem;
+            $review-component-margin: 0 8rem $m-primary-lg;
+            $header-height: 6.1rem;
+            $load-more-padding: 3rem;
+
+            & {
+                margin: $review-component-margin;
+            }
+
+            &-empty {
+                padding-top: $empty-review-top-padding;
+            }
+
+            &-total {
+                margin-bottom: 0;
+            }
+
+            &-title {
+                text-align: left;
+            }
+
+            &-header {
+                margin: 0;
+                padding: $p-primary;
+                flex-direction: row;
+                height: $header-height;
+            }
+
+            &-rating {
+                order: 0;
+            }
+
+            &-list {
+                margin: 0;
+            }
+
+            &-load-more {
+                padding: $load-more-padding 0;
+            }
+
+            &-load-more-action.button-component {
+                min-width: unset;
+            }
+
+            &-header-actions .button-component {
+                padding-top: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,32 @@
+@import '../../../../common/scss/variables';
+
+.app {
+    $recent-searches-padding: 2.3rem $p-primary $p-primary;
+    $recent-searches-font-size: 1.2rem;
+
+    .recent-searches-component {
+        & {
+            padding: $recent-searches-padding;
+            background-color: $gray-light-secondary;
+        }
+
+        &-title {
+            padding: 0;
+            font-size: $recent-searches-font-size;
+        }
+
+        &-list {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        &-list-item.button-component {
+            border-right: none;
+            margin: $m-primary 0 0;
+            font-size: $recent-searches-font-size;
+            font-weight: $font-weight-normal;
+            padding: 0;
+        }
+    }
+}

@@ -1,0 +1,8 @@
+.app {
+    $m-xsmall: 0.1rem;
+
+    .cart-header-component {
+        border-bottom: none;
+        margin-bottom: $m-xsmall;
+    }
+}

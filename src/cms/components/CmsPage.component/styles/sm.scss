@@ -1,0 +1,55 @@
+@import '../../../../common/scss/variables';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-down(sm) {
+    .cms-page {
+        $cms-holder-padding: $p-primary 0;
+        $cms-holder-margin: 1.8rem;
+        $cms-promo-font-size: 3.4rem;
+
+        .cms-page-component-homepage {
+            padding-inline-start: 0;
+            padding-inline-end: 0;
+        }
+
+        .cms-holder {
+            padding: $cms-holder-padding;
+
+            p {
+                font-size: $font-size-mobile;
+                margin: $cms-holder-margin;
+            }
+
+            &-text {
+                padding: 0 !important;
+            }
+        }
+
+        .cms-promo {
+            &-title {
+                font-size: $cms-promo-font-size;
+            }
+        }
+
+        .cms-tabs {
+            [role='tablist'] li {
+                font-size: $font-size-mobile;
+                background-color: $gray-light-secondary;
+            }
+
+            [role='tablist'] [aria-selected='true'] {
+                font-weight: $font-weight-bold;
+            }
+
+            p {
+                * {
+                    font-size: $font-size-mobile !important;
+                }
+            }
+        }
+
+        .cms-faqs .cms-tabs [role='tablist'] {
+            padding: 0 $p-primary;
+        }
+    }
+}

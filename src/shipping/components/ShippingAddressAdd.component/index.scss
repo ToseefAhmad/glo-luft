@@ -1,0 +1,9 @@
+@import '../../../common/scss/variables';
+
+.app {
+    .shipping-address-add-component {
+        .back-component-control-title {
+            font-weight: $font-weight-bold;
+        }
+    }
+}

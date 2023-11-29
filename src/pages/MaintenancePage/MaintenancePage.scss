@@ -1,0 +1,51 @@
+@import '../../common/scss/variables';
+
+// Styling of this page made identical to maintenance page in Magento 503.phtml
+.maintenance-page {
+    $maintenance-page-color: #000;
+    $maintenance-page-font-family: sans-serif;
+    $maintenance-page-background-color: #041e42;
+    $maintenance-page-body-max-width: 60rem;
+    $maintenance-page-title-font-size: 1.8rem;
+    $maintenance-page-title-line-height: 1.2;
+    $maintenance-page-icon-size: 5.7rem;
+    $maintenance-page-text-line-height: 1.1;
+
+    & {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        padding: $p-primary;
+        background-color: $maintenance-page-background-color;
+        color: $maintenance-page-color;
+        font-family: $maintenance-page-font-family;
+    }
+
+    &-body {
+        flex-grow: 1;
+        max-width: $maintenance-page-body-max-width;
+        padding: $p-primary;
+        background-color: $light;
+        text-align: center;
+    }
+
+    &-icon {
+        vertical-align: top;
+        width: $maintenance-page-icon-size;
+        height: $maintenance-page-icon-size;
+    }
+
+    &-title {
+        margin: $m-primary 0 $m-secondary;
+        font-size: $maintenance-page-title-font-size;
+        font-weight: $font-weight-normal;
+        line-height: $maintenance-page-title-line-height;
+    }
+
+    &-text {
+        font-size: $font-size-lg;
+        line-height: $maintenance-page-text-line-height;
+        margin-bottom: 0;
+    }
+}

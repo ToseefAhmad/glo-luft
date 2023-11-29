@@ -1,0 +1,34 @@
+@import '../../../../common/scss/variables';
+@import '~bat-core/cart/src/components/CartCmsBlock.component/styles/glo/index';
+@import '../../CartNavigation.component/index';
+@import '../../CartHeader.component/index';
+@import '../../CartDetails.component/index';
+
+.app {
+    .cart-info-component {
+        $empty-cart-padding-bottom: 6rem;
+
+        & {
+            background-color: $page-bg;
+        }
+
+        &-header-wrapper {
+            background-color: $light;
+            border-bottom: $border-width solid $gray-light-primary;
+        }
+
+        .cart-header-component {
+            max-width: $max-content-width;
+            margin: auto;
+            border: none;
+        }
+
+        .cart-continue-shopping {
+            margin-top: $m-primary !important; // Override inline style
+        }
+
+        .cart-navigation-component + .cms-block-component {
+            padding-bottom: $empty-cart-padding-bottom;
+        }
+    }
+}

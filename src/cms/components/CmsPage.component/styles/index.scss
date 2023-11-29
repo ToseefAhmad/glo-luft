@@ -1,0 +1,386 @@
+@import '../../../../common/scss/variables';
+@import '~@luft/cms/src/components/CmsPage.component/index';
+@import '~bat-core/product/src/components/ProductListSlider.component/styles/glo/index';
+@import '~bat-core/cms/src/components/CmsMenuSet.component/styles/glo/index';
+@import '~bat-core/common/src/components/AccordionToggle.component/styles/glo/index';
+
+.cms-page {
+    $cms-title-font-size: 4.4rem;
+    $cms-holder-padding: $p-primary-lg 3rem $p-primary-lg;
+    $cms-promo-font-size: 6rem;
+    $cms-promo-line-height: 0.96;
+    $cms-max-width: 98rem;
+    $cms-holder-margin: 0 0 $m-primary;
+    $cms-holder-font-size: 2.5rem;
+    $cms-holder-line-height: 1.2;
+    $cms-holder-p-margin: $m-secondary 0;
+    $cms-tabs-max-width: 77rem;
+    $cms-tabs-tablist-width: 100vw;
+    $cms-tabs-tablist-height: 0.1rem;
+    $cms-tabs-tablist-margin: 0 -0.1rem;
+    $cms-tabs-tablist-max-width: 50%;
+    $cms-tabs-tablist-min-height: 6.4rem;
+    $cms-tabs-tabpanel-padding: 4rem 3rem $p-primary;
+    $cms-tabs-tabpanel-line-height: 2.3rem;
+    $cms-tabs-tabpanel-p-margin: 0 0 $m-primary;
+    $cms-velo-top-block-padding: 18.5rem;
+    $cms-velo-bottom-block-padding: 8rem;
+    $cms-promo-top: 50%;
+    $cms-promo-left: 50%;
+    $cms-promo-width: 90%;
+    $cms-tabs-color: #f4f4f4;
+    $cms-page-font-size: 1.3rem;
+    $cms-page-title-size: 2.4rem;
+    $cms-page-component-padding: 0 $p-primary 6rem;
+    $heading-font-size: 2rem;
+    $cms-page-title-border-bottom: $secondary-border-width solid #d8d8d8;
+    $cms-faq-heading-margin-bottom: 3rem;
+    $cms-arrow-link-icon-width: 2rem;
+    $cms-arrow-link-icon-height: 1.4rem;
+    $cms-arrow-link-icon-top: 0.3rem;
+    $cms-arrow-link-icon-margin-left: 0.6rem;
+    $cms-arrow-link-hover-icon-margin-left: 1.2rem;
+    $cms-arrow-link-icon-transition: margin-left 200ms;
+    $cms-list-padding-left: 1.4rem;
+    $cms-accordion-item-border: $secondary-border-width solid #d8d8d8;
+    $cms-accordion-action-font-size: 1.3rem;
+    $cms-accordion-action-padding: 2.5rem 0 2.3rem;
+    $cms-accordion-action-icon-size: 1.3rem;
+    $cms-table-border: 1px solid #d8d8d8;
+    $cms-table-header-background: #f7f7f7;
+
+    &-component {
+        width: 100%;
+        padding: $cms-page-component-padding;
+    }
+
+    &-title {
+        border-bottom: $cms-page-title-border-bottom !important; // Override inline style
+        font-size: $cms-page-title-size;
+        font-weight: $font-weight-bold;
+        padding: $p-primary-lg 0;
+        margin-bottom: $m-primary-lg;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    &-heading {
+        font-size: $heading-font-size;
+        text-transform: uppercase;
+        margin: $m-primary-lg 0 $m-primary;
+    }
+
+    &-title + .cms-page-heading {
+        margin-top: 0;
+    }
+
+    .cms-arrow-link {
+        color: $dark;
+        display: inline-block;
+        font-weight: $font-weight-bold;
+        text-decoration: none;
+        text-transform: uppercase;
+        position: relative;
+    }
+
+    .cms-arrow-link::after {
+        content: '';
+        position: absolute;
+        background-image: url('~bat-core/common/src/resources/svg/base/bat-arrow-right.svg');
+        background-size: $cms-arrow-link-icon-width $cms-arrow-link-icon-height;
+        margin-left: $cms-arrow-link-icon-margin-left;
+        height: $cms-arrow-link-icon-height;
+        width: $cms-arrow-link-icon-width;
+        left: 100%;
+        top: $cms-arrow-link-icon-top;
+        transition: $cms-arrow-link-icon-transition;
+    }
+
+    .cms-arrow-link:hover::after {
+        margin-left: $cms-arrow-link-hover-icon-margin-left;
+    }
+
+    .cms-accordion {
+        & {
+            border-bottom: $cms-accordion-item-border !important; // Override inline style
+        }
+
+        &.first-item {
+            border-top: $cms-accordion-item-border !important; // Override inline style
+        }
+
+        &.active {
+            padding-bottom: $p-primary;
+        }
+
+        &-action {
+            font-size: $cms-accordion-action-font-size;
+            font-weight: $font-weight-bold;
+            padding: $cms-accordion-action-padding;
+            cursor: pointer;
+            border-bottom: $cms-accordion-item-border;
+            position: relative;
+        }
+
+        &-action::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            width: $cms-accordion-action-icon-size;
+            height: $cms-accordion-action-icon-size;
+            background-image: url('~bat-core/common/src/resources/svg/base/bat-increment.svg');
+            background-size: $cms-accordion-action-icon-size $cms-accordion-action-icon-size;
+        }
+
+        &.active .cms-accordion-action::after {
+            background-image: url('~bat-core/common/src/resources/svg/base/bat-decrement.svg');
+        }
+
+        & > div > *:not(.cms-accordion-action) {
+            display: none;
+        }
+
+        &.active > div > * {
+            display: inherit;
+        }
+    }
+
+    .page-builder-component {
+        ol,
+        ul {
+            margin-left: $m-primary;
+        }
+
+        ol li,
+        ul li {
+            padding-left: $cms-list-padding-left;
+            margin-bottom: $m-primary;
+        }
+
+        ol ol {
+            list-style-type: lower-latin;
+            margin-left: $m-primary-lg;
+            padding-top: $p-primary;
+        }
+
+        p {
+            margin-bottom: $m-primary;
+        }
+
+        .cms-block-component p {
+            margin-bottom: 0;
+        }
+
+        table {
+            border: $cms-table-border;
+        }
+
+        table td {
+            padding: $p-primary;
+        }
+
+        table tr:first-child td {
+            background-color: $cms-table-header-background;
+            font-weight: $font-weight-bold;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        .product-preview-alt-component-footer {
+            display: none;
+        }
+    }
+
+    & {
+        overflow: hidden;
+        background-color: $light;
+    }
+
+    .cms-promo {
+        & {
+            position: relative;
+            color: $light;
+            text-align: center;
+        }
+
+        &-title {
+            position: absolute;
+            top: $cms-promo-top;
+            left: $cms-promo-left;
+            width: $cms-promo-width;
+            font-weight: $font-weight-bold;
+            line-height: $cms-promo-line-height;
+            text-transform: uppercase;
+            transform: translate(-50%, -50%);
+            font-size: $cms-title-font-size;
+        }
+    }
+
+    .cms-holder {
+        & {
+            max-width: $cms-max-width;
+            margin: 0 auto;
+            padding: $cms-holder-padding;
+            text-align: center;
+            color: $light;
+        }
+
+        &-title {
+            margin: $cms-holder-margin;
+            font-size: $cms-holder-font-size;
+            font-weight: $font-weight-semibold;
+            line-height: $cms-holder-line-height;
+            text-transform: uppercase;
+        }
+
+        p {
+            margin: $cms-holder-p-margin;
+        }
+
+        a {
+            color: $light;
+            font-weight: $font-weight-bold;
+            text-transform: uppercase;
+        }
+    }
+
+    .cms-video {
+        max-width: $cms-max-width;
+        margin: 0 auto;
+    }
+
+    .cms-tabs {
+        & {
+            width: 100%;
+            max-width: $cms-tabs-max-width;
+            margin: 0 auto !important;
+            border: 0;
+        }
+
+        [class^='tabs_navigationGradient'] {
+            &::before,
+            &::after {
+                display: none;
+            }
+        }
+
+        [role='tablist'] {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            overflow: initial;
+
+            &::before,
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                width: $cms-tabs-tablist-width;
+                height: $cms-tabs-tablist-height;
+                background-color: $gray-light-primary;
+            }
+
+            &::before {
+                right: 100%;
+            }
+
+            &::after {
+                left: 100%;
+            }
+        }
+
+        [role='tablist'] li {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-shrink: 1;
+            flex-grow: 1;
+            margin: $cms-tabs-tablist-margin;
+            padding: $p-secondary;
+            max-width: $cms-tabs-tablist-max-width;
+            min-height: $cms-tabs-tablist-min-height;
+            border: $border-width solid $light;
+            border-top-color: $cms-tabs-color;
+            border-bottom-color: $gray-light-primary;
+            font-size: $font-size-lg;
+            font-weight: $font-weight-normal;
+            line-height: 1;
+            text-transform: uppercase;
+            text-align: center;
+            background-color: $cms-tabs-color;
+        }
+
+        [role='tablist'] [aria-selected='true'] {
+            color: $primary;
+            border-color: $gray-light-primary $gray-light-primary $light;
+            background-color: $light;
+        }
+
+        // Override inline styles
+        [role='tabpanel'] > div {
+            padding: $cms-tabs-tabpanel-padding !important;
+        }
+
+        h4 {
+            color: $secondary;
+        }
+
+        * {
+            font-size: $font-size-md;
+            line-height: $cms-tabs-tabpanel-line-height;
+        }
+
+        p {
+            & {
+                margin: $cms-tabs-tabpanel-p-margin;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .cms-row-with-columns .cms-page-column-flex {
+        flex-basis: auto;
+    }
+
+    &-text.cms-page-align-center {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .cms-justify-end {
+        justify-content: flex-end;
+    }
+
+    .velo-cms-row {
+        padding: 0 $m-secondary;
+    }
+
+    .velo-cms-heading {
+        margin: $m-primary 0 $m-tertiary;
+    }
+
+    .velo-cms-title {
+        padding: 0 $p-secondary $p-primary;
+
+        &.bottom-block {
+            padding-top: $p-primary;
+        }
+    }
+
+    .velo-cms-text {
+        padding: 0 $p-secondary;
+
+        &.top-block {
+            padding-bottom: $cms-velo-top-block-padding;
+        }
+
+        &.bottom-block {
+            padding-bottom: $cms-velo-bottom-block-padding;
+        }
+    }
+}

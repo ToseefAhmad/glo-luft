@@ -1,0 +1,59 @@
+@import 'variables';
+@import '~bootstrap/scss/mixins';
+
+/**
+  requires container element to contain className={`classname classname-${visibleNumber}`}
+  where visibleNumber is in range of $min-items - $max-items
+
+  $item-selector - selector for child item of scrollable list
+  $min-items - min items visible in scrollable list
+  $max-items - max items visible in scrollable list
+  $partial-coefficient - coefficient determining how much of last + 1 element is visible
+ */
+@mixin scrollable-list-media-all(
+    $item-selector,
+    $min-items: 1,
+    $max-items: 10,
+    $partial-coefficient: 0.4,
+    $scroll-bar-width: false
+) {
+    overflow: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    // for mozilla
+    scrollbar-width: thin;
+    scrollbar-color: $scroll-color $scroll-bg;
+
+    &::-webkit-scrollbar {
+        width: $scroll-bar-width or $scroll-width;
+        height: $scroll-height;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: $scroll-bg;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: $scroll-color;
+    }
+
+    @include media-breakpoint-down(sm) {
+        &::-webkit-scrollbar {
+            display: block;
+
+            @if ($scroll-bar-width) {
+                width: $scroll-width;
+            }
+        }
+    }
+
+    @for $i from $min-items through $max-items {
+        // for all from min to max
+        &-#{$i} #{$item-selector} {
+            // for each child of container
+            width: #{100% / ($i + $partial-coefficient)}; // set width, equal to 100% / 1.4, 100% / 2.4, etc.
+            scroll-snap-align: start;
+        }
+    }
+}

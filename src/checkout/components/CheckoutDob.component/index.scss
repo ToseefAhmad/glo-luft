@@ -1,0 +1,20 @@
+@import '../../../common/scss/variables';
+@import '~@luft/common/src/components/FormGroup.component/index';
+
+.checkout-dob-component {
+    & {
+        position: relative;
+        padding: $p-primary;
+    }
+
+    &-title {
+        margin-bottom: $m-secondary;
+        text-transform: uppercase;
+        font-size: $h4-font-size;
+        font-weight: $font-weight-bold;
+    }
+
+    .form-group {
+        margin-bottom: 0;
+    }
+}

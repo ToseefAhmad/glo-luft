@@ -1,0 +1,12 @@
+@import '../../../common/scss/variables';
+@import '~@luft/common/src/components/Error.component/index';
+
+.espay-component {
+    & {
+        text-align: center;
+    }
+
+    &-title {
+        margin-bottom: $m-primary;
+    }
+}

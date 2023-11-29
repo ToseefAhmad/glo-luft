@@ -1,0 +1,42 @@
+@import '../../../common/scss/variables';
+@import '../VariationAttributeAdaptive.component/index';
+@import '../VariationAttributeColor.component/index';
+@import '~@luft/product/src/components/VariationAttribute.component/index';
+@import '~bat-core/product/src/components/VariationAttributeTitle.component/styles/glo/index';
+
+// Override @mixin variationAttributeType styles
+.app {
+    .variation-attribute {
+        $variation-attribute-bg-clr: #f9f9f9;
+        $variation-attribute-border-clr: #e1e1e1;
+
+        .variation-attribute-value {
+            border-color: transparent;
+            border-width: $secondary-border-width;
+            background-color: $variation-attribute-bg-clr;
+        }
+
+        .variation-attribute-value.active,
+        .variation-attribute-value:hover {
+            &::after {
+                outline: $secondary-border-width solid $primary;
+            }
+        }
+
+        .variation-attribute-value.disabled {
+            border-color: $variation-attribute-border-clr;
+
+            &::after {
+                border: 0;
+                outline: 0;
+                box-shadow: none;
+                background: linear-gradient(
+                    to top left,
+                    transparent calc(50% - 2px),
+                    #e1e1e1,
+                    transparent calc(50% + 2px)
+                );
+            }
+        }
+    }
+}

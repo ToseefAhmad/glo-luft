@@ -1,0 +1,32 @@
+# GLO
+#import "@luft/quote/src/graphql/fragments/ShippingMethod.fragment.graphql"
+
+fragment ShippingAddressFragment on ShippingCartAddress {
+    address {
+        address_id
+        city
+        company
+        country {
+            id
+            name
+            code
+        }
+        firstname
+        lastname
+        postcode
+        region {
+            id
+            name
+            code
+        }
+        district
+        street
+        telephone
+    }
+    shipping_methods {
+        ...ShippingMethodFragment
+    }
+    selected_shipping_method {
+        ...ShippingMethodFragment
+    }
+}

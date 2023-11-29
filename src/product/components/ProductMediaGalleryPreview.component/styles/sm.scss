@@ -1,0 +1,74 @@
+@import '../../../../common/scss/variables';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(sm) {
+    .app {
+        .app-content .product-media-gallery-preview-component {
+            $preview-padding: 0.6rem 0 $p-primary;
+
+            & {
+                padding: $preview-padding;
+            }
+
+            &,
+            .swiper-container {
+                position: static;
+                height: auto;
+            }
+        }
+
+        .product-media-gallery-preview-component {
+            $swipe-slider-size: 9.4rem;
+            $swipe-slider-before-height: 0.6rem;
+            $swipe-slide-margin-left: 0.8rem;
+
+            & {
+                display: block;
+            }
+
+            .swiper-wrapper {
+                justify-content: center;
+                flex-direction: row;
+            }
+
+            .swiper-slide {
+                & {
+                    width: $swipe-slider-size;
+                    height: $swipe-slider-size;
+                }
+
+                &:not(:last-child) {
+                    margin-bottom: 0;
+                }
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    height: $swipe-slider-before-height;
+                    background-color: transparent;
+                    z-index: 1;
+                    transition: background-color 200ms ease;
+                }
+            }
+
+            .swiper-slide + .swiper-slide {
+                margin-left: $swipe-slide-margin-left;
+            }
+
+            .swiper-slide:hover,
+            .swiper-slide-thumb-active {
+                & {
+                    border: none;
+                    color: $primary;
+                }
+
+                &::before {
+                    background: $primary;
+                }
+            }
+        }
+    }
+}

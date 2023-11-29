@@ -1,0 +1,36 @@
+@import '../../../common/scss/variables';
+
+.push-notification-modal-component {
+    &-message,
+    &-link.button-component {
+        font-size: $font-size-lg;
+        line-height: $line-height-lg;
+        padding: 0;
+        vertical-align: baseline;
+    }
+
+    .push-notification-modal-component-cancel {
+        $letter-spacing: 0.075rem;
+        $padding-y: 1.6rem;
+        $box-shadow-hover: 0 0 .9rem $secondary-dark;
+
+        font-weight: $button-font-weight;
+        font-size: $font-size-md;
+        letter-spacing: $letter-spacing;
+        line-height: 1;
+        border-color: $button-tertiary-border-color;
+        border-width: $secondary-border-width;
+        padding-top: $padding-y;
+        padding-bottom: $padding-y;
+        color: $primary;
+        border-radius: $form-border-radius;
+
+        &:hover {
+            border-color: $button-tertiary-border-color-hover;
+        }
+
+        &:focus {
+            box-shadow: $box-shadow-hover;
+        }
+    }
+}

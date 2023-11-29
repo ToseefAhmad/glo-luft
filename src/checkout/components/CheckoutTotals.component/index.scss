@@ -1,0 +1,35 @@
+@import '../../../user/components/SocialProviders.component/index';
+@import '../../../common/scss/variables';
+
+.app {
+    .checkout-totals-component {
+        $total-price-font-size: 1.8rem;
+        $total-price-letter-spacing: 0.023rem;
+
+        &-points-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: $m-secondary;
+            font-size: $font-size-md;
+        }
+
+        &-total {
+            align-items: center;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        &-total-label,
+        &-total-price-label {
+            font-size: $font-size-md;
+        }
+
+        &-total-price-value {
+            font-weight: $font-weight-extrabold;
+            font-size: $total-price-font-size;
+            letter-spacing: $total-price-letter-spacing;
+        }
+    }
+}

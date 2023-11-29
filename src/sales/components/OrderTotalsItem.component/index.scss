@@ -1,0 +1,15 @@
+@import '../../../common/scss/variables';
+
+.app {
+    .order-totals-item-component {
+        & {
+            font-size: $font-size-md;
+        }
+
+        &-value {
+            font-weight: $font-weight-normal;
+            white-space: nowrap;
+            margin-left: $m-secondary;
+        }
+    }
+}

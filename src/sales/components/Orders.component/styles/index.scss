@@ -1,0 +1,28 @@
+@import '../../../../common/scss/variables';
+@import '../../Orders.component/index';
+@import '~bat-core/sales/src/components/OrderItem.component/styles/glo/index';
+
+.app {
+    .orders-component {
+        $orders-title-padding-bottom: 0.8rem;
+
+        &:not(:first-child),
+        &-group:not(:first-child) {
+            border-top: none;
+        }
+
+        .orders-component-group {
+            .orders-component-group-title {
+                background-color: $background-primary-color;
+                padding-top: $p-secondary;
+                padding-bottom: $orders-title-padding-bottom;
+                line-height: 1;
+                font-size: $font-size-base;
+            }
+        }
+
+        &-list {
+            background-color: $gray-light-secondary;
+        }
+    }
+}

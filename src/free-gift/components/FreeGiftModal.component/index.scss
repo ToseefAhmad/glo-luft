@@ -1,0 +1,12 @@
+@import '../../../common/scss/variables';
+@import '~bat-core/product/src/components/ProductListSlider.component/styles/glo/index';
+
+.modal-component.free-gift-modal-component {
+    .modal-confirm .modal-component-body-content {
+        max-width: none;
+    }
+
+    .product-list-slider-component-products {
+        padding-bottom: $p-primary;
+    }
+}

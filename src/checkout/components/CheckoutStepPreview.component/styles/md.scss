@@ -1,0 +1,12 @@
+@import '~@luft/common/src/scss/mixins';
+@import '../../../../common/scss/variables';
+
+@include media-breakpoint-up(md) {
+    .app {
+        .checkout-step-preview-component {
+            &-preview-placeholder {
+                font-size: $font-size-md;
+            }
+        }
+    }
+}

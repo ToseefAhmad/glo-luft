@@ -1,0 +1,17 @@
+@import '../../../common/scss/variables';
+@import '~bat-core/product/src/components/ProductPrice.component/styles/glo/index';
+@import '~bat-core/product/src/components/ProductPreviewAlt.component/styles/glo/index';
+@import '~bat-core/common/src/scss/grid/index';
+@import '../VariationAttributes.component/index';
+
+.app {
+    .product-list-component {
+        & {
+            background-color: $background-primary-color;
+        }
+
+        .col-6 {
+            margin-bottom: $m-secondary;
+        }
+    }
+}

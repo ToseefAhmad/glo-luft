@@ -1,0 +1,44 @@
+@import '../../../../common/scss/variables';
+
+.app {
+    .coupon-component {
+        & {
+            padding: $p-primary;
+        }
+
+        &-title {
+            font-size: $font-size-md;
+            font-weight: $font-weight-normal;
+            color: $primary;
+            text-transform: none;
+        }
+
+        &-body {
+            padding: 0;
+            border-bottom: none;
+            display: flex;
+        }
+
+        .form-group {
+            margin-bottom: 0;
+        }
+
+        &-actions,
+        .button-component {
+            padding: 0;
+        }
+
+        .form-group-component {
+            margin-right: $m-secondary;
+            flex-grow: 1;
+        }
+
+        .cms-promo-code-title {
+            display: inline-block;
+        }
+
+        .cms-promo-code-title-bold {
+            font-weight: $font-weight-bold;
+        }
+    }
+}

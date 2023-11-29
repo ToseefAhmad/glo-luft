@@ -1,0 +1,19 @@
+@import '../../../common/scss/variables';
+
+.app {
+    $button-height: 5.3rem;
+
+    .cart-item-update-actions-component-action.cart-item-update-actions-component-save.button-component {
+        font-weight: $font-weight-bold;
+        border-top: $border-width solid $gray-light-primary;
+        font-size: $font-size-base;
+        height: $button-height;
+    }
+    
+    .cart-item-update-actions-component-action.cart-item-update-actions-component-cancel.button-component {
+        font-weight: $font-weight-bold;
+        border-top: $border-width solid $gray-light-primary;
+        font-size: $font-size-base;
+        height: $button-height;
+    }
+}

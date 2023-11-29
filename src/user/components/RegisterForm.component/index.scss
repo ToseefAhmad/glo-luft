@@ -1,0 +1,35 @@
+@import '../../../common/scss/variables';
+@import '../../../common/components/Checkbox.component/index';
+
+.app {
+    .register-form-component {
+        .checkbox-component {
+            margin-bottom: $m-secondary;
+
+            &-label-text {
+                color: $primary;
+                font-size: $font-size-md;
+                display: block;
+            }
+        }
+
+        &-tooltip {
+            color: $dark-grey;
+            font-size: $font-size-base;
+            margin-bottom: $m-secondary;
+        }
+
+        &-terms-conditions-link {
+            color: $primary;
+        }
+
+        &-submit {
+            margin-bottom: $m-primary;
+
+            &-title {
+                font-weight: $font-weight-bold;
+                letter-spacing: $letter-spacing-mobile;
+            }
+        }
+    }
+}

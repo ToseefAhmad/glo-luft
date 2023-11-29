@@ -1,0 +1,23 @@
+@import '../../../../common/scss/variables';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(md) {
+    .app {
+        .product-sale-component {
+            .product-price-component-regular,
+            .product-price-component-minimum,
+            .product-price-component-final {
+                .product-price-component-regular-value,
+                .product-price-component-minimum-value,
+                .product-price-component-final-value,
+                .product-price-component-discounted-value {
+                    font-size: $font-size-lg;
+                }
+            }
+
+            &-name {
+                font-size: $font-size-md;
+            }
+        }
+    }
+}

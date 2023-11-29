@@ -1,0 +1,11 @@
+@import '../../../common/scss/variables';
+@import '~@luft/user/src/components/ForgotPassword.component/index';
+@import '~bat-core/common/src/components/Button.component/styles/glo/index';
+
+.app {
+    .forgot-password-component {
+        &-tip {
+            text-align: center;
+        }
+    }
+}

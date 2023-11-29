@@ -1,0 +1,5 @@
+#import "bat-core/quote/src/graphql/fragments/BatPayment.fragment.graphql"
+
+fragment PaymentFragment on Cart {
+    ...BatPaymentFragment
+}

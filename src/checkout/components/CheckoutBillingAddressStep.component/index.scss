@@ -1,0 +1,15 @@
+@import '~bat-core/billing/src/components/BillingAddress.component/styles/glo/index';
+
+.app {
+    .checkout-billing-address-step-component {
+        $body-padding-right: 4.6rem;
+
+        &-preview {
+            .checkout-step-preview-component {
+                &-body {
+                    padding-right: $body-padding-right;
+                }
+            }
+        }
+    }
+}

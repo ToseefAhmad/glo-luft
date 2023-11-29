@@ -1,0 +1,10 @@
+@import '../../../../common/scss/variables';
+
+.app {
+    .product-description-component {
+        & {
+            padding: $p-secondary $p-secondary 0;
+            font-size: $font-size-md;
+        }
+    }
+}

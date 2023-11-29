@@ -1,0 +1,12 @@
+@import '../../../../common/scss/variables';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(xl) {
+    .app {
+        .checkout-info-component {
+            .cart-header-component {
+                padding: 0;
+            }
+        }
+    }
+}

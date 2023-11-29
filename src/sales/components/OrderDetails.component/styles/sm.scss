@@ -1,0 +1,17 @@
+@import '../../../../common/scss/variables';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-down(sm) {
+    .app {
+        .order-details-component {
+            .reorder-component {
+                margin-block-start: 0;
+                padding: 0 $p-primary $p-primary;
+
+                .button-component {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

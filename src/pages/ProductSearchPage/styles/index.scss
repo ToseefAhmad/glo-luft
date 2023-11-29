@@ -1,0 +1,45 @@
+@import '../../../common/scss/variables';
+@import '~@luft/catalog/src/components/SearchTopBar.component/index';
+@import '~bat-core/common/src/components/Back.component/styles/glo/index';
+@import '~bat-core/catalog/src/components/SearchTopBar.component/styles/glo/index';
+@import '~bat-core/product/src/components/ProductSortsDropdown.component/styles/glo/index';
+@import '../../../product/components/ProductList.component/index';
+
+.product-search-page {
+    & {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+
+    .back-component {
+        &-nav {
+            background-color: $light;
+        }
+
+        &-control {
+            font-size: $font-size-base;
+            font-weight: $font-weight-normal;
+        }
+    }
+
+    &-content {
+        flex-grow: 1;
+        overflow: hidden;
+        background-color: $page-bg;
+    }
+
+    &-header {
+        padding: $p-primary $p-primary 0;
+    }
+
+    &-top-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .search-top-bar-component {
+        margin-left: auto;
+    }
+}

@@ -1,0 +1,34 @@
+@import '../../../../common/scss/variables';
+
+.app {
+    .cart-totals-component {
+        border-top: 0;
+
+        & {
+            margin-bottom: $m-primary;
+            z-index: $zindex-sticky-internal;
+        }
+
+        &-label,
+        &-price {
+            font-size: $h1-font-size;
+            font-weight: $font-weight-extrabold;
+        }
+
+        &-actions {
+            border-top: $border-width solid $gray-light-secondary;
+        }
+
+        &-checkout {
+            font-weight: $font-weight-bold;
+
+            &::before {
+                display: none;
+            }
+        }
+
+        .cms-block-component .cart-navigation-checkout {
+            text-decoration-color: $primary-font-color;
+        }
+    }
+}

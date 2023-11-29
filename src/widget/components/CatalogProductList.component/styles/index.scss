@@ -1,0 +1,26 @@
+@import '../../../../common/scss/mixins';
+
+.app {
+    .catalog-product-list-component {
+        $self: &;
+        $title-font-size: 2.4rem;
+        $title-margin: 0 0 1.3rem;
+
+        & {
+            margin-top: 0;
+        }
+
+        &-title {
+            font-size: $title-font-size;
+            margin: $title-margin;
+        }
+
+        &-arrow.button-component {
+            background-image: url('~bat-core/common/src/resources/svg/base/bat-arrow.svg');
+        }
+
+        &-products {
+            @include scrollable-list-media-all($item-selector: #{$self}-product);
+        }
+    }
+}

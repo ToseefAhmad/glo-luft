@@ -1,0 +1,12 @@
+@import '../../../../common/scss/variables';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(md) {
+    .variation-attribute-adaptive-component {
+        $variation-attribute-width: 10rem;
+
+        & {
+            grid-template-columns: repeat(auto-fill, $variation-attribute-width);
+        }
+    }
+}

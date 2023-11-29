@@ -1,0 +1,68 @@
+@import '../../../../common/scss/variables';
+@import '../../../../common/scss/mixins';
+@import '~@luft/checkout/src/components/CheckoutInfo.component/index';
+@import '~bat-core/sales/src/components/CouponsWallet.component/styles/glo/index';
+@import '../../../../cart/components/CartNavigation.component/index';
+@import '../../RewardPoints.component/index';
+
+.app {
+    .checkout-info-component {
+        $contact-info-body-padding-right: 4.6rem;
+        $summary-title-font-size: 1.8rem;
+        $billing-address-as-shipping-block-padding: 2.5rem $p-primary;
+        $body-total-title-padding-top: 3rem;
+
+        & {
+            background: $page-bg;
+        }
+
+        &-contact-info-box {
+            .checkout-step-preview-component {
+                &-body {
+                    padding-right: $contact-info-body-padding-right;
+                }
+            }
+        }
+
+        &-sm-billing-as-shipping::before {
+            background-color: $gray-light-primary;
+        }
+
+        .billing-address-as-shipping-component {
+            padding: $billing-address-as-shipping-block-padding;
+        }
+
+        &-body-total-title {
+            font-weight: $font-weight-extrabold;
+            font-size: $summary-title-font-size;
+            text-transform: uppercase;
+            padding-top: $body-total-title-padding-top;
+            margin-top: 0;
+        }
+
+        .reward-points-component {
+            margin-bottom: $m-primary;
+        }
+
+        &-step-title {
+            font-weight: $font-weight-bold;
+            border-color: $gray-light-primary;
+            line-height: 1;
+        }
+
+        &-create-order-holder {
+            margin-bottom: $m-primary;
+        }
+
+        .checkout-info-component-create-order-holder {
+            .cms-block-component a {
+                color: $primary-font-color;
+                text-decoration-color: $primary-font-color;
+            }
+        }
+
+        &-payment-box.box-component {
+            margin-bottom: $m-primary;
+        }
+    }
+}

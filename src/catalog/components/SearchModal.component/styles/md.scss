@@ -1,0 +1,65 @@
+@import '../../../../common/scss/variables';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(md) {
+    .app {
+        .search-modal-component {
+            $search-results-title-padding: 6rem 8rem $p-primary;
+            $search-results-list-padding: 0 8rem 4rem;
+            $recent-viewed-width: 66.6%;
+            $recent-viewed-padding: 6rem 8rem 4rem;
+            $search-modal-position: 4rem;
+            $product-recent-body-max-width: 19rem;
+            $product-body-max-width: calc(100vw / 3 - 5.5rem - 3 * #{$m-primary-lg});
+
+            &-content {
+                position: absolute;
+                top: 100%;
+                width: auto;
+                left: $search-modal-position;
+                right: $search-modal-position;
+            }
+
+            &-results-full {
+                &.search-modal-component-recent-results {
+                    .product-preview-alt-component-body {
+                        max-width: $product-recent-body-max-width;
+                    }
+                }
+
+                &:not(.search-modal-component-recent-results) {
+                    .product-preview-alt-component-body {
+                        max-width: $product-body-max-width;
+                    }
+                }
+            }
+
+            &-results-list {
+                padding: $search-results-list-padding;
+            }
+
+            &-results-title {
+                padding: $search-results-title-padding;
+            }
+
+            .product-price-component {
+                &,
+                &-regular-value,
+                &-final-value,
+                &-discounted-value {
+                    font-size: $font-size-lg;
+                }
+            }
+
+            &-recent-results {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .recent-viewed-product-component {
+                flex: 0 0 $recent-viewed-width;
+                padding: $recent-viewed-padding;
+            }
+        }
+    }
+}

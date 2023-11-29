@@ -1,0 +1,8 @@
+@import '../../../common/scss/variables';
+@import '~bat-core/product/src/components/ProductDetail.component/styles/glo/index';
+// TODO: Move these styles to bat-core and import them in ProductDetail.component
+@import '../ProductMediaGallery.component/index';
+@import '../ProductQty.component/index';
+@import '../ProductDescription.component/index';
+@import '../VariationAttributes.component/index';
+@import '../../../review/components/Reviews.component/index';

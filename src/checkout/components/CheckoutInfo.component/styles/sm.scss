@@ -1,0 +1,11 @@
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-down(sm) {
+    .app {
+        .checkout-info-component {
+            &-billing-box.box-component {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

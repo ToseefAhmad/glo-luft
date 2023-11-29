@@ -1,0 +1,81 @@
+@import '../../../../common/scss/variables';
+@import '~@luft/common/src/scss/mixins';
+@import '~@luft/common/src/components/Loader.component/index';
+@import '~bat-core/common/src/components/Button.component/styles/glo/index';
+
+.social-providers-component {
+    $social-login-icon-size: 2.1rem;
+    $social-login-remove-icon-size: 3rem;
+
+    & {
+        position: relative;
+        margin: $m-primary;
+        padding-top: $p-secondary;
+        border-top: $border-width solid $primary-border-color;
+        text-align: center;
+
+        &::before {
+            content: attr(data-separator);
+            position: relative;
+            top: -$m-primary;
+            padding: 0 $p-secondary;
+            text-transform: uppercase;
+            color: #7d7d7d;
+            background-color: $light;
+            font-size: 1.1rem;
+        }
+    }
+
+    &-item {
+        display: flex;
+        margin-bottom: $m-secondary;
+    }
+
+    &-button {
+        @extend .button-component;
+        @extend .button-component-tertiary;
+        padding: $p-secondary;
+        width: 100%;
+    }
+
+    &-button-text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &-button-facebook &-button-text::before,
+    &-button-google &-button-text::before {
+        content: '';
+        width: $social-login-icon-size;
+        height: $social-login-icon-size;
+        margin-right: $m-secondary;
+        background-repeat: no-repeat;
+        background-size: $social-login-icon-size $social-login-icon-size;
+    }
+
+    &-button-facebook &-button-text::before {
+        background-image: url('../../../../common/resources/svg/bat-facebook-social-providers.svg');
+    }
+
+    &-button-google &-button-text::before {
+        background-image: url('../../../../common/resources/svg/bat-google-social-providers.svg');
+    }
+
+    &-button.button-component:disabled {
+        border: $border-width solid $primary-border-color !important;
+        background-color: $disabled-color !important;
+        opacity: 1;
+        color: $dark !important;
+    }
+
+    &-remove.button-component {
+        width: $social-login-remove-icon-size;
+        height: 100%;
+        margin-left: $m-secondary;
+        padding: 0;
+        border: 0;
+        background: url('../../../../common/resources/svg/bat-remove.svg') no-repeat 50% 50%;
+        background-size: $social-login-remove-icon-size $social-login-remove-icon-size;
+    }
+}

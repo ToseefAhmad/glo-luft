@@ -1,0 +1,22 @@
+@import '../../../common/scss/variables';
+@import '~bat-core/common/src/components/Radio.component/styles/glo/index';
+
+.app {
+    .shipping-method-list-component {
+        $shipping-method-list-component-item-amount-free-font-size: 1.3rem;
+        $shipping-method-list-component-radio-label-padding: 1.5rem $p-primary;
+        $shipping-method-list-component-radio-label-text-size: 1.8rem;
+        $shipping-method-list-component-radio-label-text-border-width: 0.3rem;
+        $shipping-method-list-component-radio-label-text-box-shadow: 0 0 0 0.2rem $primary;
+        $shipping-method-list-component-radio-label-text-top: 0.4rem;
+
+        .shipping-method-list-component-item {
+            border-color: $gray-light-primary;
+        }
+
+        .shipping-method-list-component-item-amount-free {
+            font-size: $shipping-method-list-component-item-amount-free-font-size;
+            text-transform: capitalize;
+        }
+    }
+}

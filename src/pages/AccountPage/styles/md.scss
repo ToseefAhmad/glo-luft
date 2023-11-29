@@ -1,0 +1,49 @@
+@import '../../../common/scss/variables';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(md) {
+    .account-page {
+        $account-component-content-max-width: 130rem;
+        $account-settings-security-wrapper-padding-bottom: 3rem;
+
+        & {
+            background-color: $background-primary-color;
+        }
+
+        &-body {
+            flex-flow: row;
+            width: 100%;
+            max-width: $account-component-content-max-width;
+            margin: $layout-indent-xl auto;
+            padding: 0 0 0 $layout-indent-xl;
+
+            & > .loader-component {
+                flex: 1;
+                padding: $p-secondary 0;
+            }
+        }
+
+        .account-menu-component {
+            flex: 1;
+            height: min-content;
+            background-color: $light;
+        }
+
+        &-content {
+            flex: 2;
+            height: min-content;
+            margin-left: $layout-indent-xl;
+            background-color: $light;
+        }
+
+        .account-settings-security-wrapper {
+            width: 50%;
+            padding: 0 0 $p-primary $p-primary;
+        }
+
+        .back-component-control-title {
+            text-transform: none;
+            font-weight: $font-weight-normal;
+        }
+    }
+}

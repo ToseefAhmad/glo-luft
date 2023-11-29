@@ -1,0 +1,21 @@
+@import '../../../common/scss/variables';
+
+.product-filters-sidebar-component {
+    $sidebar-width: 25.8rem;
+
+    & {
+        max-width: $sidebar-width;
+    }
+
+    .accordion-toggle.button-component {
+        border-top: $border-width solid $secondary-border-color;
+    }
+
+    .form-check-label {
+        color: $primary-font-color;
+    }
+
+    .product-applied-filters-component-clear.button-component {
+        background: url('../../../common/resources/svg/bat-clean.svg') no-repeat;
+    }
+}

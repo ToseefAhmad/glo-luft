@@ -1,0 +1,134 @@
+@import '../../../../common/scss/variables';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(md) {
+    .home-page {
+        $arrow-button-height: 3rem;
+        $arrow-button-background-size: 1.6rem $arrow-button-height;
+        $home-page-middle-block-title-font-size: 2.6rem;
+        $home-page-middle-block-top-row-mb: 6rem;
+        $home-page-bottom-block-desktop-margin-top: 4rem;
+        $home-page-bottom-block-desktop-margin-bottom: 6rem;
+        $banner-strong-font-size: 4.4rem;
+        $banner-text-max-width: 50rem;
+        $banner-strong-padding-bottom: 3rem;
+        $banner-content-line-height: 1.09 !important;
+        $banner-content-padding-right: 6rem;
+        $home-page-middle-block-top-row-text-container-margin: 3rem;
+        $home-page-middle-block-title-font-size: 2.6rem;
+
+        &-content {
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        &_text-container {
+            margin-left: $home-page-middle-block-top-row-text-container-margin;
+            margin-right: $home-page-middle-block-top-row-text-container-margin;
+
+            .title {
+                font-size: $home-page-middle-block-title-font-size;
+            }
+
+            .tagline {
+                font-size: $font-size-lg;
+            }
+        }
+
+        &-top-block {
+            &-col {
+                .home-page_text-container .tagline {
+                    font-size: $font-size-md;
+                }
+            }
+        }
+
+        &-slider {
+            .slick-slider.slick-initialized {
+                .slick-list {
+                    .slick-track {
+                        .slick-slide {
+                            & > div {
+                                min-height: inherit;
+                            }
+                        }
+                    }
+                }
+
+                .slide-with-text div[class*='banner_overlay'] {
+                    max-width: $banner-text-max-width;
+                    margin-left: auto;
+                    padding-right: $banner-content-padding-right;
+                    text-align: left;
+                }
+
+                .slide-with-text div[class*='banner_content'] {
+                    font-size: $h3-font-size !important;
+                }
+
+                .slide-with-text div[class*='banner_content'] strong span {
+                    font-size: $banner-strong-font-size !important;
+                    line-height: $banner-content-line-height;
+                }
+
+                .slide-with-text div[class*='banner_content'] strong {
+                    display: inline-block;
+                    padding-bottom: $banner-strong-padding-bottom;
+                }
+            }
+        }
+
+        .product-list-slider-component-title {
+            font-size: $home-page-middle-block-title-font-size;
+        }
+
+        .product-list-slider-component-arrow.button-component {
+            height: $arrow-button-height;
+            background-size: $arrow-button-background-size;
+        }
+
+        &-middle-block {
+            &-top-row {
+                margin-bottom: $home-page-middle-block-top-row-mb;
+
+                & > div {
+                    margin-bottom: 0 !important;
+                }
+
+                &_title {
+                    font-size: $home-page-middle-block-title-font-size;
+                    margin-bottom: $m-secondary;
+                }
+
+                &_description {
+                    font-size: $font-size-md;
+                }
+
+                &_icon-col {
+                    align-items: center;
+                    justify-content: center !important;
+
+                    div {
+                        margin-top: auto !important;
+                    }
+                }
+            }
+        }
+
+        &-bottom-block {
+            margin-top: $home-page-bottom-block-desktop-margin-top;
+            margin-bottom: $home-page-bottom-block-desktop-margin-bottom;
+
+            &-col {
+                .title {
+                    font-size: $home-page-middle-block-title-font-size;
+                    text-align: left;
+                }
+            }
+
+            &-text-col {
+                font-size: $font-size-md;
+            }
+        }
+    }
+}

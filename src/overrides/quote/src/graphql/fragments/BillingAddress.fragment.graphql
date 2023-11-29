@@ -1,0 +1,25 @@
+# GLO
+fragment BillingAddressFragment on BillingCartAddress {
+    address {
+        address_id
+        city
+        company
+        country {
+            id
+            name
+            code
+        }
+        firstname
+        lastname
+        postcode
+        region {
+            id
+            name
+            code
+        }
+        district
+        street
+        telephone
+    }
+    same_as_shipping
+}

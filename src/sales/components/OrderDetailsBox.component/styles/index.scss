@@ -1,0 +1,15 @@
+@import '../../../../common/scss/variables';
+
+.app {
+    .order-details-box-component {
+        border-color: $gray-light-primary;
+
+        &-title {
+            padding: 0;
+        }
+
+        &-content {
+            padding-left: $p-primary;
+        }
+    }
+}

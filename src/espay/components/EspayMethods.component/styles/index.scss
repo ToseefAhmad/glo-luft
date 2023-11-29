@@ -1,0 +1,74 @@
+@import '../../../../common/scss/variables';
+@import '~@luft/common/src/components/Loader.component/index';
+@import '~@luft/common/src/components/Error.component/index';
+@import '~bat-core/common/src/components/Radio.component/styles/glo/index';
+
+.espay-methods-component {
+    $espay-methods-component-radio-label-text-padding-left: 3.5rem;
+    $espay-methods-component-default-order: 2;
+    $espay-methods-component-list-title-background-size: 1.4rem 0.9rem;
+    $espay-methods-component-list-title-padding: 2.2rem $p-primary;
+    $espay-methods-component-title-font-size: 1.8rem;
+    $espay-methods-component-list-item-icon-width: 5rem;
+    $espay-methods-component-list-item-icon-margin-right: 1.6rem;
+    $espay-methods-component-radio-label-height: 6rem;
+    $espay-methods-component-radio-label-padding-left: 4rem;
+
+    & {
+        display: flex;
+        flex-direction: column;
+        border-bottom: $border-width solid $gray-light-primary;
+        margin: 0 -#{$m-primary} $m-primary;
+    }
+
+    &-title {
+        margin-bottom: $m-primary;
+        font-size: $espay-methods-component-title-font-size;
+        font-weight: $font-weight-bold;
+        text-transform: uppercase;
+        padding: 0 $p-primary;
+    }
+
+    &-default {
+        order: $espay-methods-component-default-order;
+    }
+
+    &-list-title.button-component {
+        font-size: $font-size-mobile;
+    }
+
+    &-list-item {
+        border-top: $border-width solid $gray-light-primary;
+    }
+
+    &-list-item-icon {
+        width: $espay-methods-component-list-item-icon-width;
+        margin-right: $espay-methods-component-list-item-icon-margin-right;
+    }
+
+    &-empty {
+        padding: 0 $p-primary $p-primary;
+    }
+
+    .radio-component-label {
+        height: $espay-methods-component-radio-label-height;
+        padding-left: $espay-methods-component-radio-label-padding-left;
+    }
+
+    &-list-title.accordion-toggle-component.button-component {
+        padding: $espay-methods-component-list-title-padding;
+        border-top-color: $gray-light-primary;
+        background-image: url('../../../../common/resources/svg/bat-collapsed-espay.svg');
+        background-size: $espay-methods-component-list-title-background-size;
+        text-transform: none;
+        box-shadow: none;
+
+        &.accordion-toggle-component-active {
+            background-image: url('../../../../common/resources/svg/bat-expanded-espay.svg');
+        }
+    }
+
+    .accordion-collapse-component {
+        padding: 0;
+    }
+}

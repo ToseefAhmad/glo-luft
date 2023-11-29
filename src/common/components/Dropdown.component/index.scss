@@ -1,0 +1,33 @@
+@import '../../scss/variables';
+
+.app {
+    .dropdown-component {
+        $toggle-box-shadow: 0 0 0.9rem 0 $tertiary-border-color;
+        $menu-box-shadow: 0 0.5rem 0.9rem 0 $tertiary-border-color;
+
+        &.show.dropdown .button-component.dropdown-toggle {
+            border: $border-width solid $tertiary-border-color;
+            box-shadow: $toggle-box-shadow;
+            border-bottom: none;
+        }
+
+        .button-component.dropdown-toggle {
+            color: $primary-font-color;
+
+            &:focus,
+            &:active,
+            &:active:focus {
+                color: $primary-font-color;
+            }
+
+            &::after {
+                background-image: url('../../resources/svg/bat-toggle.svg');
+            }
+        }
+
+        .dropdown-menu.show {
+            box-shadow: $menu-box-shadow;
+        }
+    }
+}
+

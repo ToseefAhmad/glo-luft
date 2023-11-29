@@ -1,0 +1,13 @@
+@import '../../../../common/scss/variables';
+
+.recommended-category-component {
+    $title-font-size: 2rem;
+
+    .product-list-slider-component-title {
+        text-align: left;
+        font-size: $title-font-size;
+        font-weight: $font-weight-extrabold;
+        color: $primary;
+        text-transform: uppercase;
+    }
+}

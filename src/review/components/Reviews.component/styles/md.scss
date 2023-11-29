@@ -1,0 +1,14 @@
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(md) {
+    .app {
+        .reviews-component {
+            $block-width: 40%;
+
+            &-rating,
+            &-header-actions {
+                width: $block-width;
+            }
+        }
+    }
+}

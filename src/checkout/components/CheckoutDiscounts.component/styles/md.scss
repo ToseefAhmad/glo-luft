@@ -1,0 +1,18 @@
+@import '../../../../common/scss/variables';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(md) {
+    .app {
+        $discounts-button-width: 11rem;
+        $discounts-button-height: 5rem;
+
+        .checkout-discounts-component {
+            .coupon-component {
+                &-submit {
+                    width: $discounts-button-width;
+                    height: $discounts-button-height;
+                }
+            }
+        }
+    }
+}

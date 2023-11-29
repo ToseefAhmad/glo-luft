@@ -1,0 +1,33 @@
+@import '../../../../common/scss/variables';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(md) {
+    .app {
+        .espay-methods-component {
+            $espay-methods-margin-bottom: 3rem;
+
+            & {
+                margin: 0 0 $espay-methods-margin-bottom;
+            }
+
+            &-title {
+                font-size: $h1-font-size;
+                padding: 0;
+            }
+
+            &-list-title.button-component,
+            &-list-item-radio.form-check {
+                font-size: $font-size-md;
+            }
+
+            &-empty {
+                padding: 0 0 $p-primary;
+            }
+
+            .accordion-component {
+                border-left: $border-width solid $gray-light-primary;
+                border-right: $border-width solid $gray-light-primary;
+            }
+        }
+    }
+}

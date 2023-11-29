@@ -1,0 +1,63 @@
+@import '../../scss/variables';
+@import '~@luft/common/src/components/Checkbox.component/index';
+
+.app,
+.modal-component {
+    .checkbox-component {
+        $checkbox-size: 1.8rem;
+        $check-icon-size: 1.2rem 1.2rem;
+
+        &-default {
+            .checkbox-component-label-text {
+                & {
+                    min-height: $checkbox-size;
+                    line-height: $checkbox-size;
+                    padding-left: $checkbox-size + $p-primary;
+                    font-size: $font-size-md;
+                }
+
+                &::before {
+                    border-width: $secondary-border-width;
+                    width: $checkbox-size;
+                    height: $checkbox-size;
+                }
+            }
+
+            .checkbox-component-input:checked + .checkbox-component-label .checkbox-component-label-text {
+                &::before {
+                    background-image: url('~bat-core/common/src/resources/svg/base/bat-check-symbol-white.svg');
+                    background-color: $primary;
+                    background-size: $check-icon-size;
+                }
+            }
+
+            .checkbox-component-input:disabled,
+            .checkbox-component-input:checked:disabled {
+                + .checkbox-component-label {
+                    & {
+                        cursor: auto;
+                        color: $disabled-light-font-color;
+                    }
+
+                    .checkbox-component-label-text {
+                        &::before {
+                            background-size: $check-icon-size;
+                            background-color: $disabled-dark-color;
+                            border-color: $disabled-dark-color;
+                            background-repeat: no-repeat;
+                            background-position: center;
+                        }
+                    }
+                }
+            }
+
+            .checkbox-component-input:checked:disabled + .checkbox-component-label {
+                .checkbox-component-label-text {
+                    &::before {
+                        background-image: url('~bat-core/common/src/resources/svg/base/bat-check-symbol-white.svg');
+                    }
+                }
+            }
+        }
+    }
+}

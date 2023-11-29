@@ -1,0 +1,42 @@
+@import '../../../common/scss/variables';
+
+.app,
+.modal-component {
+    .product-preview {
+        & {
+            margin-bottom: 0;
+            height: 100%;
+        }
+
+        > .product-preview-link-image {
+            padding: 0;
+            background-color: $image-background-color;
+        }
+
+        & .product-preview-link-name {
+            color: $primary-font-color;
+            font-size: $h4-font-size;
+            font-weight: bold;
+        }
+
+        .product-price {
+            font-size: $h3-font-size;
+        }
+
+        .product-price-final-value {
+            display: block;
+        }
+
+        .image-placeholder-component-background {
+            background-color: $image-background-color;
+        }
+
+        .wishlist-product-actions-component {
+            display: none;
+        }
+
+        .image-component {
+            padding-top: 100%;
+        }
+    }
+}

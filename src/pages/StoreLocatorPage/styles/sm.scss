@@ -1,0 +1,13 @@
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-down(sm) {
+    .store-locator-page {
+        & {
+            padding: 0;
+        }
+
+        &-body {
+            flex-direction: column;
+        }
+    }
+}

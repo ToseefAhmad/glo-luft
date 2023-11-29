@@ -1,0 +1,51 @@
+.product-filters {
+    $close-img-size: 1.7rem 1.7rem;
+    $check-img-size: 1.8rem 1.4rem;
+    $arrow-img-size: 1.5rem 1.5rem;
+    $clean-img-size: 1.1rem 1.1rem;
+    $button-height: 5.4rem;
+
+    .product-filters-preview-collapse-control.button-component {
+        background-image: url('../../../common/resources/svg/bat-close-product-filter.svg');
+        background-size: $close-img-size;
+    }
+
+    .product-filter-radio {
+        .radio-component-label-text {
+            text-transform: uppercase;
+        }
+
+        .radio-component.radio-component-tick .radio-component-check-mark {
+            background-image: url('../../../common/resources/svg/bat-check-product-filter.svg');
+            background-size: $check-img-size;
+        }
+    }
+
+    .product-applied-filters-component-clear.button-component {
+        background-image: url('../../../common/resources/svg/bat-clean.svg');
+        background-size: $clean-img-size;
+    }
+
+    .radio-component,
+    .product-filter-radio,
+    .product-filter-radio-preview.button-component {
+        height: $button-height;
+    }
+
+    .product-filter-radio-preview.button-component {
+        background-image: url('~bat-core/common/src/resources/svg/base/bat-arrow.svg');
+        background-size: $arrow-img-size;
+    }
+
+    &-header {
+        span {
+            font-weight: $font-family;
+        }
+    }
+}
+
+.modal-component .product-filter {
+    $filter-min-height: 100vh;
+
+    min-height: $filter-min-height;
+}

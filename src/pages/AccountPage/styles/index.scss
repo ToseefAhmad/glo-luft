@@ -1,0 +1,83 @@
+@import '../../../common/scss/variables';
+@import '../../../Router/Authorize.switch/index';
+@import '../../../Router/Account.switch/index';
+
+.account-page {
+    $mini-back-icon-size: 1.4rem 1.1rem;
+    $content-padding-top: 3rem;
+
+    & {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+
+    .back-component-nav-mini {
+        .back-component-control.button-component {
+            background-size: $mini-back-icon-size;
+        }
+    }
+
+    .account-menu-title .back-component-control {
+        text-align: center;
+    }
+
+    .back-component-control-title {
+        text-transform: uppercase;
+        font-weight: $font-weight-bold;
+    }
+
+    &-content {
+        flex-basis: 100%;
+    }
+
+    // If this block will have a background-color, then the loader
+    // will be inside a white rectangle, which looks terrible.
+    // Thus the background-color was moved to each block independently.
+    // It needs a higher specificity to override core styles
+    .account-page-content {
+        background-color: transparent;
+    }
+
+    .account-address-book-component,
+    .account-address-book-add-component,
+    .account-address-book-edit-component,
+    .account-security-component,
+    .account-orders-component,
+    .account-order-component,
+    .account-info-component {
+        background-color: $light;
+    }
+
+    .account-address-book-component,
+    .account-address-book-add-component,
+    .account-address-book-edit-component,
+    .account-security-component,
+    .account-info-component {
+        &-content {
+            padding-top: $content-padding-top;
+        }
+
+        legend {
+            font-size: $font-size-lg;
+            margin-bottom: $m-primary;
+        }
+    }
+
+    .update-account-info-submit {
+        margin-top: auto;
+        text-transform: uppercase;
+    }
+
+    &-body {
+        & {
+            display: flex;
+            flex: 1 0 auto;
+            flex-flow: column;
+        }
+    }
+
+    .account-settings-security-wrapper {
+        padding: 0 $p-primary;
+    }
+}

@@ -1,0 +1,5 @@
+#import "bat-core/catalog/src/graphql/fragments/BatSort.fragment.graphql"
+
+fragment SortFragment on Sort {
+    ...BatSortFragment
+}

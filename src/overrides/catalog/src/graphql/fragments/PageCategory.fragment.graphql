@@ -1,0 +1,5 @@
+#import "bat-core/catalog/src/graphql/fragments/BatPageCategory.fragment.graphql"
+
+fragment PageCategoryFragment on Category {
+    ...BatPageCategoryFragment
+}

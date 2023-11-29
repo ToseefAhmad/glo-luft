@@ -1,0 +1,81 @@
+@import '../../../common/scss/variables';
+@import '../../../common/scss/mixins';
+@import '~bat-core/sales/src/components/CouponsWallet.component/styles/glo/index';
+
+.checkout-coupons-wallet-component {
+    $icon-width: 1.4rem;
+    $icon-height: 0.8rem;
+    $icon-top: 50%;
+    $icon-margin-top: -0.4rem;
+    $coupons-content-max-height: 27rem;
+    $coupons-margin-right: 1.5rem;
+    $coupons-padding: $p-primary $p-tertiary $p-primary $p-primary;
+    $coupons-item-padding: 2.8rem 0 $p-primary;
+    $scroll-bar-width: 0.8rem;
+
+    & {
+        background-color: $light;
+        padding: $coupons-padding;
+        margin-bottom: $m-primary;
+    }
+
+    &-title {
+        text-transform: uppercase;
+        position: relative;
+        cursor: pointer;
+        font-size: $font-size-md;
+        font-weight: $font-weight-bold;
+
+        &::after {
+            content: '';
+            width: $icon-width;
+            height: $icon-height;
+            background-image: url('~@luft/common/src/resources/svg/arrow-down.svg');
+            background-size: $icon-width $icon-height;
+            position: absolute;
+            right: 0;
+            top: $icon-top;
+            margin-top: $icon-margin-top;
+        }
+
+        &-active {
+            &::after {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    &-content {
+        transition: max-height 0.3s;
+        max-height: $coupons-content-max-height;
+
+        &-collapsed {
+            overflow: hidden;
+            max-height: 0;
+        }
+
+        @include scrollable-list-media-all('.coupon-wallet-component-item', $scroll-bar-width: $scroll-bar-width);
+    }
+
+    .checkout-coupons-wallet-component-title {
+        margin-right: $coupons-margin-right;
+    }
+
+    .coupons-wallet-component-item {
+        padding: $coupons-item-padding;
+        margin-right: $coupons-margin-right;
+
+        &:last-child {
+            padding-bottom: 0;
+        }
+    }
+
+    .coupons-wallet-component-item-description {
+        white-space: normal;
+    }
+
+    .error-component {
+        white-space: normal;
+        margin-right: $coupons-margin-right;
+    }
+}

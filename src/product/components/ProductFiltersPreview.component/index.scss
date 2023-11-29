@@ -1,0 +1,7 @@
+.modal-component {
+    .product-filters-preview {
+        $filters-min-height: 100vh;
+
+        min-height: $filters-min-height;
+    }
+}

@@ -1,0 +1,15 @@
+@import '~@luft/common/src/scss/mixins';
+@import '../../../../common/scss/variables';
+
+@include media-breakpoint-up(md) {
+    .app {
+        .checkout-contact-info-form-component {
+            $message-padding-top: 2.7rem;
+
+            &-message {
+                font-size: $font-size-md;
+                padding-top: $message-padding-top;
+            }
+        }
+    }
+}

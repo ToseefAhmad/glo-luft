@@ -1,0 +1,10 @@
+@import '../../../common/scss/variables';
+@import '~bat-core/common/src/components/NumberInput.component/styles/glo/index';
+
+.app {
+    .product-qty-component {
+        &-title {
+            font-size: $font-size-mobile;
+        }
+    }
+}

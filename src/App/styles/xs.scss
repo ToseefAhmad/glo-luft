@@ -1,0 +1,12 @@
+@import '../../common/scss/variables';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-down(xs) {
+    .app {
+        $content-min-height: calc(100vh - #{$header-height-xs});
+
+        &-content {
+            min-height: $content-min-height;
+        }
+    }
+}

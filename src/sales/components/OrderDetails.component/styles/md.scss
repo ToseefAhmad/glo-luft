@@ -1,0 +1,31 @@
+@import '../../../../common/scss/variables';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(md) {
+    .app {
+        .order-details-component {
+            $order-details-component-info-padding-md: 2.5rem $p-primary 2.6rem;
+            $order-details-component-boxes-padding-md: 1.5rem 0;
+            $order-details-component-total-padding-left-md: 55%;
+            $order-details-component-grand-total-item-label-font-size-md: 2rem;
+
+            &-info {
+                padding: $order-details-component-info-padding-md;
+            }
+
+            &-boxes {
+                padding: $order-details-component-boxes-padding-md;
+            }
+
+            &-total {
+                padding-left: $order-details-component-total-padding-left-md;
+            }
+
+            &-grand-total {
+                .order-totals-item-component-label {
+                    font-size: $order-details-component-grand-total-item-label-font-size-md;
+                }
+            }
+        }
+    }
+}

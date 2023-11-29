@@ -1,0 +1,133 @@
+@import '~@luft/common/src/scss/mixins';
+@import '../../../../common/scss/variables';
+
+@include media-breakpoint-up(md) {
+    .cms-page {
+        $cms-holder-padding-top: 8rem;
+        $cms-promo-margin: -4rem;
+        $cms-font-size: 4rem;
+        $cms-holder-line-height: 5.1rem;
+        $cms-holder-margin: $m-primary 0;
+        $cms-tabs-tablist-padding: 2.4rem;
+        $cms-tabs-tabpanel-padding: 6rem 3rem 0;
+        $velo-cms-row-max-width: 74rem;
+        $velo-cms-heading-margin-top: 3.5rem;
+        $velo-cms-heading-font-size: 4.6rem;
+        $velo-cms-title-padding: 0 0 3.5rem;
+        $velo-cms-text-line-height: 2.8rem;
+        $velo-cms-tex-padding-bottom: 20.5rem;
+        $velo-cms-title-padding-top: 20rem;
+        $cms-page-font-size: 1.4rem;
+        $cms-page-title-size: 3.6rem;
+        $cms-page-component-padding: 0 8rem 8rem;
+        $heading-font-size: 2.6rem;
+        $cms-accordion-action-font-size: 1.4rem;
+        $cms-accordion-action-icon-size: 1.4rem;
+        $cms-list-margin-left: 6rem;
+
+        & {
+            font-size: $cms-page-font-size;
+        }
+
+        &-body {
+            display: flex;
+        }
+
+        &-component {
+            padding: $cms-page-component-padding;
+        }
+
+        &-component-homepage {
+            padding: 0;
+        }
+
+        &-title {
+            font-size: $cms-page-title-size;
+            text-align: left;
+        }
+
+        &-heading {
+            font-size: $heading-font-size;
+            text-transform: uppercase;
+            text-align: left;
+        }
+
+        .cms-accordion {
+            &-action {
+                font-size: $cms-accordion-action-font-size;
+            }
+
+            &-action::after {
+                width: $cms-accordion-action-icon-size;
+                height: $cms-accordion-action-icon-size;
+                background-size: $cms-accordion-action-icon-size $cms-accordion-action-icon-size;
+            }
+        }
+
+        .page-builder-component {
+            ol,
+            ul {
+                margin-left: $cms-list-margin-left;
+            }
+        }
+
+        .cms-promo {
+            margin-bottom: $cms-promo-margin;
+        }
+
+        .cms-holder {
+            & {
+                padding-top: $cms-holder-padding-top;
+            }
+
+            &-title {
+                font-size: $cms-font-size;
+                line-height: $cms-holder-line-height;
+            }
+
+            p {
+                font-size: $font-size-md;
+                margin: $cms-holder-margin;
+            }
+        }
+
+        .cms-tabs {
+            [role='tablist'] li {
+                padding: $cms-tabs-tablist-padding;
+            }
+
+            // Override inline styles
+            [role='tabpanel'] > div {
+                padding: $cms-tabs-tabpanel-padding !important;
+            }
+        }
+
+        .velo-cms-row {
+            max-width: $velo-cms-row-max-width;
+            padding: 0;
+        }
+
+        .velo-cms-heading {
+            margin-top: $velo-cms-heading-margin-top;
+            font-size: $velo-cms-heading-font-size !important;
+        }
+
+        .velo-cms-title span {
+            padding: $velo-cms-title-padding;
+            font-size: $cms-font-size !important;
+        }
+
+        .velo-cms-text span {
+            font-size: $h1-font-size !important;
+            line-height: $velo-cms-text-line-height !important;
+        }
+
+        .velo-cms-tex.top-block {
+            padding-bottom: $velo-cms-tex-padding-bottom;
+        }
+
+        .velo-cms-title.bottom-block {
+            padding-top: $velo-cms-title-padding-top;
+        }
+    }
+}

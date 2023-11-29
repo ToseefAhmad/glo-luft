@@ -1,0 +1,28 @@
+@import '../../../common/scss/variables';
+@import '../ProductDescription.component/index';
+@import '~bat-core/common/src/components/Button.component/styles/glo/index';
+
+.app {
+    $button-icon-size: 0.9rem 1.4rem;
+    $button-font-weight: $font-weight-bold;
+    $border-color: $gray-light-tertiary;
+
+    .product-secondary-information-modals-component {
+        & {
+            order: 1;
+        }
+
+        .modal-open-link.button-component {
+            border-top-color: $border-color;
+            background-image: url('../../../common/resources/svg/glo-arrow-right.svg');
+            background-size: $button-icon-size;
+            font-size: $font-size-base;
+            font-weight: $button-font-weight;
+            padding: $p-primary;
+
+            &:focus {
+                box-shadow: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,11 @@
+@import '../../../common/scss/variables';
+
+.app {
+    .reset-password-expired-component {
+        &-title {
+            font-weight: $font-weight-extrabold;
+            text-transform: uppercase;
+            border-color: $gray-light-primary;
+        }
+    }
+}

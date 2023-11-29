@@ -1,0 +1,64 @@
+#import "@luft/product/src/graphql/fragments/ProductPrice.fragment.graphql"
+#import "bat-core/product/src/graphql/fragments/ProductAttribute.fragment.graphql"
+
+fragment ProductPreviewFragment on Product {
+    id
+    name
+    type
+    sku
+    short_description
+    thumbnail_image {
+        id
+        alt
+        name
+        url
+    }
+    small_image {
+        id
+        alt
+        name
+        url
+    }
+    swatch_image {
+        id
+        alt
+        name
+        url
+    }
+    price {
+        ...ProductPriceFragment
+    }
+    price_is_dynamic
+    inventory {
+        in_stock
+    }
+    url
+    product_attributes {
+        ...ProductAttributeFragment
+    }
+    categories {
+        name
+    }
+    variation_attributes {
+        options_count
+        variation_attribute_id
+        name
+        type
+        values {
+            id
+            name
+            description
+            value
+            position
+        }
+    }
+    variations {
+        product {
+            id
+        }
+        variation_values {
+            variation_attribute_id
+            value
+        }
+    }
+}

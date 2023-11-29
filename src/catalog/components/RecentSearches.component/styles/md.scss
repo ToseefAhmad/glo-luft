@@ -1,0 +1,15 @@
+@import '../../../../common/scss/variables';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(md) {
+    .app {
+        $recent-width: calc(100% / 3);
+        $recent-padding: 6rem 4rem 6rem 10rem;
+
+        .recent-searches-component {
+            order: 1;
+            flex: 0 0 $recent-width;
+            padding: $recent-padding;
+        }
+    }
+}

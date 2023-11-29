@@ -1,0 +1,9 @@
+.app {
+    .prefilled-email-component {
+        $icon-bg-size: 2.5rem 2rem;
+
+        &::before {
+            background-size: $icon-bg-size;
+        }
+    }
+}

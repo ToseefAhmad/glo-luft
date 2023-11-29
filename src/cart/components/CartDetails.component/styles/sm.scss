@@ -1,0 +1,40 @@
+@import '../../../../common/scss/variables';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(sm) {
+    .app {
+        .cart-details-component {
+            $cart-item-info-padding-right: 3.5rem;
+
+            &-content {
+                &-products {
+                    flex-grow: 1;
+                    flex-basis: 0;
+                }
+
+                &-column {
+                    width: $total-column-width;
+                    margin-left: $m-primary;
+                }
+            }
+
+            .cart-items-component {
+                margin-bottom: $m-primary;
+            }
+
+            .cart-item-component-info-block {
+                & {
+                    width: auto;
+                }
+
+                &:not(.cart-item-component-info-block-wide) {
+                    padding-right: $cart-item-info-padding-right;
+                }
+            }
+
+            .cart-item-component-name-link {
+                white-space: normal;
+            }
+        }
+    }
+}

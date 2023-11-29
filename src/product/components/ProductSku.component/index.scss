@@ -1,0 +1,10 @@
+@import '../../../common/scss/variables';
+
+.app {
+    .product-sku-component {
+        $sku-line-height: 1.33;
+
+        font-size: $font-size-base;
+        line-height: $sku-line-height;
+    }
+}

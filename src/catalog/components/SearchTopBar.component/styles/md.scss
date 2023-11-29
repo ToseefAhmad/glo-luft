@@ -1,0 +1,7 @@
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(md) {
+    .search-top-bar-component {
+        position: relative;
+    }
+}

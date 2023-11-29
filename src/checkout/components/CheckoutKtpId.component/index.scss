@@ -1,0 +1,76 @@
+@import '../../../common/scss/variables';
+@import '~@luft/common/src/components/Button.component/index';
+@import '~@luft/common/src/components/FormGroup.component/index';
+@import '~@luft/common/src/components/Error.component/index';
+@import '~@luft/common/src/components/Loader.component/index';
+
+.checkout-ktp-id-component {
+    $button-width: 11rem;
+    $component-validated-background-color: #ceebdd;
+    $icon-holder-size: 4rem;
+    $icon-size: 2.4rem;
+
+    & {
+        position: relative;
+        padding: $p-primary;
+    }
+
+    &-title {
+        margin-bottom: $m-secondary;
+        text-transform: uppercase;
+        font-size: $h4-font-size;
+        font-weight: $font-weight-bold;
+    }
+
+    &-body {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &-code,
+    &-input.form-group-component {
+        flex-grow: 1;
+        margin: 0 $m-secondary 0 0;
+    }
+
+    &-input.form-group-component .form-group {
+        margin: 0;
+    }
+
+    &-submit {
+        width: $button-width;
+    }
+
+    &-valid {
+        & {
+            display: flex;
+            background-color: $component-validated-background-color;
+        }
+
+        &::before {
+            content: '';
+            display: block;
+            width: $icon-holder-size;
+            height: $icon-holder-size;
+            background: left top no-repeat url('~bat-core/common/src/resources/svg/base/bat-success.svg');
+            background-size: $icon-size $icon-size;
+        }
+
+        &-title {
+            font-weight: $font-weight-bold;
+            margin-bottom: $m-secondary;
+            text-transform: uppercase;
+        }
+
+        &-code {
+            display: flex;
+            align-items: center;
+        }
+
+        &-code-value {
+            padding-left: $p-tertiary;
+            font-weight: $font-weight-semibold;
+            color: $primary;
+        }
+    }
+}

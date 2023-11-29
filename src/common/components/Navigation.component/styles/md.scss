@@ -1,0 +1,26 @@
+@import '../../../scss/variables';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(md) {
+    .app {
+        .navigation-component {
+            $search-component-width: 20.8rem;
+            $search-component-padding-bottom: 1.5rem;
+
+            .search-component {
+                flex-basis: $search-component-width;
+                padding-bottom: $search-component-padding-bottom;
+                background: none;
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .app {
+        .navigation-component {
+            padding-inline-start: $p-primary;
+            padding-inline-end: $p-primary;
+        }
+    }
+}

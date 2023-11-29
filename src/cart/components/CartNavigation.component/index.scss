@@ -1,0 +1,50 @@
+@import '../../../common/scss/variables';
+
+.app {
+    .cart-navigation-component {
+        $navigation-button-padding-top: 1.4rem;
+        $navigation-button-padding-bottom: 1.2rem;
+        $checkout-icon-size: 2.6rem 1.8rem;
+
+        .cart-navigation-cart,
+        .cart-navigation-checkout {
+            & {
+                padding-top: $navigation-button-padding-top;
+                padding-bottom: $navigation-button-padding-bottom;
+                color: $dark-grey;
+            }
+
+            &.selected {
+                font-weight: $font-weight-bold;
+                color: $primary-font-color;
+            }
+        }
+
+        .cart-navigation-cart {
+            &::before {
+                background-image: url('../../../common/resources/svg/glo-bag-black.svg');
+            }
+
+            &.selected::before {
+                background-image: url('../../../common/resources/svg/glo-bag-selected.svg');
+            }
+        }
+
+        .cart-navigation-checkout {
+            &::before,
+            &.selected::before {
+                background-size: $checkout-icon-size;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+
+            &::before {
+                background-image: url('../../../common/resources/svg/glo-checkout.svg');
+            }
+
+            &.selected::before {
+                background-image: url('../../../common/resources/svg/glo-checkout-selected.svg');
+            }
+        }
+    }
+}

@@ -1,0 +1,29 @@
+@import '../../../common/scss/variables';
+@import '../VariationAttributes.component/index';
+@import '../ProductQty.component/index';
+@import '../ProductSale.component/index';
+
+.app {
+    .product-update-component {
+        &-header {
+            border-bottom: $border-width solid $gray-light-primary;
+        }
+
+        &-action-close {
+            background-image: url('../../../common/resources/svg/glo-close-black.svg');
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        &-title {
+            font-size: $h3-font-size;
+        }
+
+        .number-input-component-increment,
+        .number-input-component-decrement {
+            &-group .button-component:focus {
+                box-shadow: none;
+            }
+        }
+    }
+}

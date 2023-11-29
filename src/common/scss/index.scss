@@ -1,0 +1,51 @@
+@import 'variables';
+@import 'mixins';
+@import './keyframes';
+
+@import 'reset';
+@import 'fonts';
+
+@import '~@luft/common/src/components/Loader.component/index';
+@import '~@luft/common/src/components/Error.component/index';
+@import '~@luft/common/src/components/NoCache.component/index';
+@import './components';
+
+body,
+html {
+    font-family: $font-family;
+    color: $primary-font-color;
+    height: 100%;
+
+    #root {
+        height: 100%;
+    }
+}
+
+.app {
+    min-height: 100%;
+
+    .btn-light,
+    .button-component-light {
+        color: $primary-font-color;
+    }
+
+    .address-book-form-component-address-fields-holder,
+    .billing-address-form-component-address-fields-holder,
+    .shipping-address-form-component-address-fields-holder {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 0;
+
+        .form-group .form-group {
+            margin-bottom: 0;
+        }
+    }
+
+    .cms-block-component {
+        overflow-x: hidden;
+    }
+}
+
+.locked-scroll {
+    overflow: hidden;
+}

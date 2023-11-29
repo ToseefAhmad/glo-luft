@@ -1,0 +1,14 @@
+@import '../../../../common/scss/variables';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(sm) {
+    .app {
+        $empty-cart-padding-bottom-sm: 34rem;
+
+        .cart-info-component {
+            .cart-navigation-component + .cms-block-component {
+                padding-bottom: $empty-cart-padding-bottom-sm;
+            }
+        }
+    }
+}

@@ -1,0 +1,58 @@
+@import '../../../common/scss/variables';
+@import '../ProductDescription.component/index';
+
+.app {
+    .product-secondary-information-tabs-component {
+        $product-tabs-content-padding: 4rem 6rem 10rem;
+        $active-tab-box-shadow: inset 0 -0.3rem 0 $tertiary-border-color;
+        $active-tab-font-weight: $font-weight-bold;
+        $tab-letter-spacing: $letter-spacing-desktop;
+        $tab-padding: $p-primary $p-primary 3rem;
+        $nav-link-max-width: 26.8rem;
+        $nav-tabs-after-width: 100vw;
+        $nav-tabs-after-height: 0.1rem;
+        $nav-tabs-after-background-color: #dbdbdb;
+
+        & {
+            font-size: $font-size-md;
+        }
+
+        .nav-tabs {
+            position: relative;
+            justify-content: center;
+            align-items: flex-end;
+
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                width: $nav-tabs-after-width;
+                height: $nav-tabs-after-height;
+                background-color: $nav-tabs-after-background-color;
+            }
+        }
+
+        .nav-item {
+            max-width: $nav-link-max-width;
+            box-shadow: none;
+        }
+
+        .tab-nav-component .nav-link {
+            & {
+                letter-spacing: $tab-letter-spacing;
+                color: $primary-font-color;
+                padding: $tab-padding;
+                white-space: nowrap;
+            }
+
+            &.active {
+                font-weight: $active-tab-font-weight;
+                box-shadow: $active-tab-box-shadow;
+            }
+        }
+
+        .tab-content {
+            padding: $product-tabs-content-padding;
+        }
+    }
+}

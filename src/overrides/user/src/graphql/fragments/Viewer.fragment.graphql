@@ -1,0 +1,5 @@
+#import "bat-core/user/src/graphql/fragments/BatViewer.fragment.graphql"
+
+fragment ViewerFragment on Viewer {
+    ...BatViewerFragment
+}

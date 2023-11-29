@@ -1,0 +1,173 @@
+@import '../../../../common/scss/variables';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-down(sm) {
+    .home-page {
+        $slider-slide-div-height: 100vh;
+        $home-page-middle-block-top-row-mb: $m-secondary;
+        $slider-slide-padding-bottom: 9rem;
+
+        &-top-slider {
+            margin: 0 -#{$m-primary} !important;
+        }
+
+        &-slider {
+            .catalog-product-list-component-products {
+                &::-webkit-scrollbar {
+                    display: inherit;
+                }
+            }
+
+            .slick-slider.slick-initialized {
+                .placed-mobile-bottom div[class*='banner_overlay'],
+                .placed-mobile-bottom div[class*='banner_posterOverlay'] {
+                    align-content: flex-end;
+                    justify-content: flex-start;
+                    padding-bottom: $slider-slide-padding-bottom !important;
+                }
+
+                .placed-mobile-bottom div[class*='banner_content'] {
+                    text-align: left;
+                }
+
+                .placed-mobile-bottom div[class*='banner_button'] {
+                    width: auto;
+                }
+            }
+        }
+
+        &_text-container {
+            margin-left: $m-primary;
+            margin-right: $m-primary;
+
+            .title {
+                font-size: $h1-font-size;
+            }
+
+            .tagline {
+                font-size: $font-size-md;
+            }
+
+            &-centered {
+                width: auto;
+            }
+        }
+
+        &-top-block {
+            &-col {
+                .home-page_text-container .tagline {
+                    font-size: $font-size-mobile;
+                }
+            }
+        }
+
+        .separator {
+            padding: $p-tertiary;
+        }
+
+        .homepage-feat-cat-col {
+            padding: $p-secondary 0 0 !important;
+
+            &:first-child {
+                padding-top: 0 !important;
+            }
+
+            img {
+                width: 100%;
+            }
+        }
+
+        &_text-container {
+            margin-left: $m-primary;
+            margin-right: $m-primary;
+
+            .title {
+                font-size: $h1-font-size;
+            }
+
+            .tagline {
+                font-size: $font-size-md;
+            }
+
+            &-centered {
+                width: auto;
+            }
+        }
+
+        &-top-block {
+            &-col {
+                .home-page_text-container .tagline {
+                    font-size: $font-size-mobile;
+                }
+            }
+        }
+
+        &-middle-block {
+            &-top-row {
+                margin-bottom: $home-page-middle-block-top-row-mb;
+
+                &_title {
+                    font-size: $h1-font-size;
+                    margin-bottom: $m-primary;
+                    text-align: center;
+                }
+
+                &_description {
+                    font-size: $font-size-mobile;
+                    text-align: center;
+                    padding-left: $p-primary;
+                    padding-right: $p-primary;
+                    margin-bottom: $m-primary !important;
+                }
+
+                &_icon-col {
+                    align-items: center;
+                    flex-direction: row !important;
+
+                    &:not(:first-child) {
+                        padding-top: $p-secondary !important;
+                    }
+
+                    figure {
+                        margin-right: $m-primary !important;
+                    }
+                }
+            }
+
+            &-bottom-row {
+                &-col {
+                    margin-right: 0 !important;
+                    padding-right: 0 !important;
+                    margin-bottom: $m-secondary !important;
+
+                    figure {
+                        margin-right: 0 !important;
+                    }
+
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        .home-page-products-slider .product-preview-alt-component-link-name,
+        .home-page-products-slider .product-price-component span {
+            font-size: $font-size-mobile;
+        }
+
+        &-bottom-block {
+            &-col {
+                .title {
+                    font-size: $h1-font-size;
+                    text-align: center;
+                    margin-bottom: $m-primary;
+                }
+            }
+
+            &-text-col {
+                font-size: $font-size-mobile;
+            }
+        }
+    }
+}

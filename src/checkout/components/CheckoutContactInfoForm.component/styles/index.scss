@@ -1,0 +1,11 @@
+@import '../../../../common/scss/variables';
+
+.app {
+    .checkout-contact-info-form-component {
+        $text-font-size: 1.3rem;
+
+        &-message {
+            font-size: $text-font-size;
+        }
+    }
+}

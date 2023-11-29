@@ -1,0 +1,24 @@
+@import '../../../common/scss/variables';
+@import '~bat-core/common/src/components/Button.component/styles/glo/index';
+
+.app {
+    .forgot-password-nav-control-component {
+        $forgot-password-nav-control-component-padding: 1.8rem 0 1.6rem;
+
+        & {
+            padding: $forgot-password-nav-control-component-padding;
+        }
+
+        &-button.button-component {
+            color: $primary;
+            font-size: $font-size-md;
+            font-weight: $font-weight-bold;
+            text-transform: uppercase;
+            transition: text-decoration-color 150ms ease;
+
+            &:hover {
+                text-decoration-color: transparent;
+            }
+        }
+    }
+}

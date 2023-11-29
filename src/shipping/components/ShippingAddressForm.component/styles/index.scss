@@ -1,0 +1,35 @@
+@import '../../../../common/scss/variables';
+
+.app {
+    .shipping-address-form-component {
+        $legend-letter-spacing: 0.018rem;
+        $legend-margin-bottom: 1.8rem;
+        $form-padding-top: 2.5rem;
+        $fieldset-margin-bottom: 3rem;
+
+        & {
+            padding-top: $form-padding-top;
+        }
+
+        .form-group-component:last-child {
+            margin-bottom: 0;
+        }
+
+        .country-control-component,
+        .region-control-component,
+        .city-control-component,
+        .district-control-component {
+            margin-bottom: $m-secondary;
+        }
+
+        legend {
+            font-size: $font-size-md;
+            letter-spacing: $legend-letter-spacing;
+            margin-bottom: $legend-margin-bottom;
+        }
+
+        fieldset {
+            margin-bottom: $fieldset-margin-bottom;
+        }
+    }
+}

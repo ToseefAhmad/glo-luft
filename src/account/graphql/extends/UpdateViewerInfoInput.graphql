@@ -1,0 +1,7 @@
+extend input UpdateViewerInfoInput {
+    """
+    [account][GLO]
+    Name prefix
+    """
+    prefix: String
+}

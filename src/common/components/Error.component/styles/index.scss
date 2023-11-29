@@ -1,0 +1,24 @@
+@import '../../../scss/variables';
+@import '~@luft/common/src/components/Error.component/index';
+
+.app,
+.modal-component {
+    .error-component {
+        $error-padding-y: 0.6rem;
+
+        & {
+            text-align: center;
+            background-color: $danger-light;
+            color: $danger;
+            font-weight: $font-weight-bold;
+            text-transform: none;
+            padding-top: $error-padding-y;
+            padding-bottom: $error-padding-y;
+        }
+
+        a,
+        a:hover {
+            color: $danger;
+        }
+    }
+}

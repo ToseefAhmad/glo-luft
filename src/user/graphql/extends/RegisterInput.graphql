@@ -1,0 +1,25 @@
+extend input RegisterInput {
+    """
+    [user][GLO]
+    User Name Prefix
+    """
+    prefix: String
+
+    """
+    [user][GLO]
+    User Subscribed Status
+    """
+    is_subscribed: Boolean
+
+    """
+    [user][GLO]
+    Verified document type
+    """
+    document_type: String
+
+    """
+    [user][GLO]
+    Verified document number
+    """
+    document_number: String
+}

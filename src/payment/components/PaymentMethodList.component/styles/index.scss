@@ -1,0 +1,49 @@
+@import '../../../../common/scss/variables';
+@import '~bat-core/common/src/components/Radio.component/styles/glo/index';
+@import '~bat-core/paynamics/src/components/PaynamicsPaymentMethod.component/scss/glo/index';
+
+.app {
+    .payment-method-list-component {
+        $payment-method-list-component-item-padding: 1.45rem $p-primary;
+        $payment-method-list-component-radio-label-text-font-size: 1.3rem;
+        $payment-method-list-component-radio-label-text-left: 3.5rem;
+        $payment-method-list-component-radio-label-text-padding-left: 10rem;
+        $payment-method-list-component-item-tip-padding-top: 1.5rem;
+        $payment-method-list-component-item-tip-padding-left: 3.5rem;
+        $payment-method-list-component-pnx-cc-icon-width: 4.4rem;
+        $payment-method-list-component-pnx-cc-icon-height: 2.9rem;
+        $payment-method-list-component-pnx-cc-icon-top: -0.5rem;
+        $payment-method-list-component-pnx-wechatpay-icon-width: 4.2rem;
+        $payment-method-list-component-pnx-wechatpay-icon-height: 3.7rem;
+        $payment-method-list-component-pnx-wechatpay-icon-top: -0.5em;
+        $payment-method-list-component-pnx-gc-icon-width: 5rem;
+        $payment-method-list-component-pnx-gc-icon-height: 2.7rem;
+        $payment-method-list-component-pnx-gc-icon-top: -0.4rem;
+        $payment-method-list-component-pnx-coins-icon-width: 4rem;
+        $payment-method-list-component-pnx-coins-icon-height: 3.6rem;
+        $payment-method-list-component-pnx-coins-icon-top: -0.7rem;
+        $payment-method-list-component-pnx-alipay-icon-width: 5rem;
+        $payment-method-list-component-pnx-alipay-icon-height: 1.3rem;
+        $payment-method-list-component-pnx-alipay-icon-top: 0.3rem;
+        $payment-method-list-component-pnx-grabpay-icon-width: 5rem;
+        $payment-method-list-component-pnx-grabpay-icon-height: 1.4rem;
+        $payment-method-list-component-pnx-grabpay-icon-top: 0.2rem;
+
+        .back-component-control-title {
+            font-weight: $font-weight-bold;
+        }
+
+        &-item-tip {
+            padding-top: $payment-method-list-component-item-tip-padding-top;
+            padding-left: $payment-method-list-component-item-tip-padding-left;
+        }
+
+        .radio-component-label-text {
+            font-size: $payment-method-list-component-radio-label-text-font-size;
+        }
+
+        &-items:not(:last-child) .payment-method-list-component-item {
+            border-bottom: $border-width solid $gray-light-primary;
+        }
+    }
+}

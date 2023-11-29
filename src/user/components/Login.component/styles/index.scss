@@ -1,0 +1,18 @@
+@import '../../../../common/scss/variables';
+@import '~@luft/user/src/components/Login.component/index';
+@import '~bat-core/user/src/components/PhoneNumberConfirmation.component/styles/glo/index';
+@import '../../RegisterNavControl.component/index';
+@import '../../ForgotPasswordNavControl.component/index';
+@import '../../PrefilledEmail.component/index';
+@import '../../SocialProviders.component/index';
+
+.app {
+    .login-component {
+        &-title {
+            border-bottom: $primary-border-width solid $gray-light-primary;
+            color: $primary;
+            font-weight: $font-weight-extrabold;
+            text-transform: uppercase;
+        }
+    }
+}

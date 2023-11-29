@@ -1,0 +1,15 @@
+@import 'variables';
+
+@keyframes bounce-arrow {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX($arrow-translate-value);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}

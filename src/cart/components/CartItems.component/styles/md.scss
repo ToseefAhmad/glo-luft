@@ -1,0 +1,12 @@
+@import '../../../../common/scss/variables';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(md) {
+    .app {
+        .cart-items-component {
+            .cart-item-component:not(:last-child) {
+                margin-bottom: $m-secondary;
+            }
+        }
+    }
+}

@@ -1,0 +1,11 @@
+@import '../../../common/scss/variables';
+
+.app {
+    .login-form-component {
+        &-note {
+            color: $primary;
+            font-size: $font-size-md;
+            text-align: center;
+        }
+    }
+}

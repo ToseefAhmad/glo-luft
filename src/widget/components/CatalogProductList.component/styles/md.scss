@@ -1,0 +1,21 @@
+@import '../../../../common/scss/variables';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(md) {
+    .app {
+        .catalog-product-list-component {
+            $padding: 0 4rem;
+            $title-margin: 6.5rem 0 $m-primary;
+            $title-font-size: 2.6rem;
+
+            &-title {
+                font-size: $title-font-size;
+                margin: $title-margin;
+            }
+
+            &-products-holder {
+                padding: $padding
+            }
+        }
+    }
+}

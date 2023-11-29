@@ -1,0 +1,65 @@
+#import "@luft/product/src/graphql/fragments/ProductPrice.fragment.graphql"
+#import "bat-core/product/src/graphql/fragments/ProductAttribute.fragment.graphql"
+#import "bat-core/url-resolver/src/graphql/fragments/EntityUrl.fragment.graphql"
+
+fragment ProductDetailFragment on Product {
+    id
+    name
+    type
+    sku
+    description
+    product_image {
+        id
+        alt
+        name
+        url
+    }
+    gallery_images {
+        id
+        alt
+        name
+        url
+    }
+    gallery_videos {
+        id
+        title
+        description
+        url
+        preview_url
+    }
+    thumbnail_image {
+        id
+        alt
+        name
+        url
+    }
+    product_attributes {
+        ...ProductAttributeFragment
+    }
+    price {
+        ...ProductPriceFragment
+    }
+    price_is_dynamic
+    inventory {
+        in_stock
+        qty
+    }
+    reviews {
+        total
+        summary {
+           value
+        }
+    }
+    url
+    url_rewrite {
+        ...BatEntityUrlFragment
+    }
+    meta_description
+    meta_keywords
+    meta_title
+    meta_robots
+    canonical_url
+    categories {
+        name
+    }
+}

@@ -1,0 +1,17 @@
+@import '../../../../common/scss/variables';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(md) {
+    .app {
+        .shipping-address-form-component {
+            fieldset:not(:last-of-type) {
+                margin-bottom: $m-primary;
+            }
+
+            legend {
+                font-size: $font-size-lg;
+                letter-spacing: $letter-spacing-desktop;
+            }
+        }
+    }
+}

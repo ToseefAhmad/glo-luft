@@ -1,0 +1,29 @@
+@import '../../../../common/scss/variables';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(md) {
+    .app {
+        .search-component {
+            $search-modal-component-form-width: 20.8rem;
+
+            & {
+                position: static;
+            }
+
+            &-form {
+                border-bottom: $border-width solid $dark-grey;
+                background: $dark;
+            }
+
+            &-form-content {
+                width: $search-modal-component-form-width;
+            }
+
+            &-form-content-input.input-component {
+                font-size: $font-size-base;
+                background: $dark;
+                padding-left: 0;
+            }
+        }
+    }
+}

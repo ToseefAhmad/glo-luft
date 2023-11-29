@@ -1,0 +1,63 @@
+@import '../../../scss/variables';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-down(sm) {
+    .app {
+        .navigation-component {
+            $logo-width: 4.3rem;
+            $logo-height: 3.6rem;
+            $button-margin-left: 1.6rem;
+
+            & {
+                padding: 0 $p-primary;
+            }
+
+            &::after {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                content: '';
+                background: $primary;
+            }
+
+            .navigation-component-content {
+                &-text {
+                    width: $logo-width;
+                    height: $logo-height;
+                    background-size: $logo-width $logo-height;
+                }
+            }
+
+            .account-nav-control-alt-component,
+            .cart-bar-component-button {
+                margin-left: $button-margin-left;
+            }
+
+            .navigation-component-toggle .navbar-toggler-icon {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+@include media-breakpoint-up(sm) {
+    .app {
+        .navigation-component {
+            $navigation-component-icon-margin-inline: 2.6rem;
+
+            .account-nav-control-alt-component {
+                margin-inline-start: $navigation-component-icon-margin-inline;
+            }
+
+            .cart-bar-component-button {
+                margin-inline-start: $navigation-component-icon-margin-inline;
+            }
+
+            .navigation-component-toggle .navbar-toggler-icon {
+                margin-inline-end: $navigation-component-icon-margin-inline;
+            }
+        }
+    }
+}

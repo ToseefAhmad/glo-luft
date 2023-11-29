@@ -1,0 +1,51 @@
+@import '../../../common/scss/variables';
+
+.app {
+    .variation-attribute-color-component {
+        $variation-attribute-size: 2.4rem;
+        $variation-attribute-padding: 0.2rem;
+        $variation-attribute-margin-right: 0.7rem;
+        $variation-attribute-content-size: 1.8rem;
+
+        & {
+            margin: 0;
+        }
+
+        .variation-attribute-color-component-value {
+            & {
+                min-width: auto;
+                min-height: auto;
+                width: $variation-attribute-size;
+                height: $variation-attribute-size;
+                border-radius: 50%;
+                padding: $variation-attribute-padding;
+                border-color: $light;
+                margin-bottom: 0;
+                transition: border-color 150ms ease-in-out;
+            }
+
+            &::after {
+                display: none;
+            }
+
+            &:not(:last-child) {
+                margin-right: $variation-attribute-margin-right;
+            }
+
+            &:hover {
+                box-shadow: none;
+            }
+
+            &:hover,
+            &-active {
+                border-color: $primary;
+            }
+        }
+
+        &-content {
+            width: $variation-attribute-content-size;
+            height: $variation-attribute-content-size;
+            border-radius: 50%;
+        }
+    }
+}

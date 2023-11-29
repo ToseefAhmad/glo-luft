@@ -1,0 +1,22 @@
+@import '../../../common/scss/variables';
+@import '../SocialProviders.component/index';
+
+.social-login-connections-component {
+    & {
+        margin-top: $m-primary;
+    }
+
+    &-title {
+        @extend legend;
+    }
+
+    .social-providers-component {
+        margin: $m-primary 0;
+        padding: 0;
+        border: 0;
+
+        &::before {
+            display: none;
+        }
+    }
+}

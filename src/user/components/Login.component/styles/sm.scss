@@ -1,0 +1,12 @@
+@import '../../../../common/scss/variables';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-down(sm) {
+    .app {
+        .login-component {
+            &-title {
+                font-size: $font-size-base;
+            }
+        }
+    }
+}

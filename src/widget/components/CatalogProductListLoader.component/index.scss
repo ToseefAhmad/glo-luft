@@ -1,0 +1,11 @@
+@import '../../../common/scss/mixins';
+
+.app {
+    .catalog-product-list-loader {
+        $self: &;
+
+        & &-items {
+            @include scrollable-list-media-all($item-selector: #{$self}-item);
+        }
+    }
+}

@@ -1,0 +1,10 @@
+@import '~@luft/common/src/scss/mixins';
+@import '../../../../common/scss/variables';
+
+@include media-breakpoint-up(md) {
+    .app {
+        .checkout-authorize-component {
+            font-size: $font-size-md;
+        }
+    }
+}

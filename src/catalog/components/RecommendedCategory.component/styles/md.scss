@@ -1,0 +1,11 @@
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(md) {
+    .recommended-category-component {
+        $title-font-size: 2.6rem;
+
+        .product-list-slider-component-title {
+            font-size: $title-font-size;
+        }
+    }
+}

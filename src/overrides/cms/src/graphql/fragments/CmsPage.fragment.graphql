@@ -1,0 +1,5 @@
+#import "bat-core/cms/src/graphql/fragments/BatCmsPage.fragment.graphql"
+
+fragment CmsPageFragment on CmsPage {
+    ...BatCmsPageFragment
+}

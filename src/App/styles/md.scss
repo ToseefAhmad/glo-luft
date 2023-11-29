@@ -1,0 +1,10 @@
+@import '../../common/scss/variables';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(md) {
+    .app {
+        &-content {
+            background-color: $page-bg;
+        }
+    }
+}

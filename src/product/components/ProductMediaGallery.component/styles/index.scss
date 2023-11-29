@@ -1,0 +1,83 @@
+@import '../../../../common/scss/variables';
+@import '~@luft/product/src/components/ProductMediaGallery.component/index';
+@import '../../ProductMediaGalleryPreview.component/index';
+
+.app {
+    .product-media-gallery-component {
+        $arrow-height: 1.1rem;
+        $arrow-width: 0.7rem;
+        $arrow-prev-position: 100% 50%;
+        $arrow-next-position: 0 50%;
+        $button-size: 3rem;
+        $button-border-radius: 50%;
+        $button-background-color: rgba(0, 0, 0, 0.3);
+        $button-background-hover-color: rgba(0, 0, 0, 0.4);
+
+        & {
+            height: 100%;
+            background-color: transparent;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        &-carousel {
+            width: 100%;
+        }
+
+        &-preview {
+            order: 2;
+        }
+
+        .swiper-button-prev,
+        .swiper-button-next {
+            & {
+                border-radius: $button-border-radius;
+                background-color: $button-background-color;
+                height: $button-size;
+                width: $button-size;
+                transition: background-color 300ms;
+            }
+
+            &:hover {
+                background-color: $button-background-hover-color;
+            }
+
+            &::after {
+                height: $arrow-height;
+                width: $arrow-width;
+                background-repeat: no-repeat;
+            }
+        }
+
+        .swiper-button-prev::after {
+            background-image: url('../../../../common/resources/svg/glo-swiper-arrow-left.svg');
+            background-position: $arrow-prev-position;
+        }
+
+        .swiper-button-next::after {
+            background-image: url('../../../../common/resources/svg/glo-swiper-arrow-right.svg');
+            background-position: $arrow-next-position;
+        }
+
+        .swiper-pagination-bullets {
+            display: none;
+        }
+
+        .product-media-gallery-component-magnifier {
+            & {
+                height: 100%;
+            }
+
+            div {
+                width: 100%;
+                height: 100%;
+            }
+
+            // It's crucial for magnifying the image
+            img:last-child {
+                max-width: none;
+                max-height: none;
+            }
+        }
+    }
+}

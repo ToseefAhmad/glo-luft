@@ -1,0 +1,49 @@
+@import '../../../../common/scss/variables';
+@import '~bat-core/product/src/components/ProductQtyPlain.component/styles/glo/index';
+@import '../../ProductSku.component/index';
+
+.app {
+    .product-sale-component {
+        $name-line-height: 1.54;
+        $name-margin-bottom: 1.3rem;
+        $price-letter-spacing: 0.018rem;
+        $price-margin-bottom: 1.8rem;
+
+        + .product-sale-component {
+            border-color: $gray-light-primary;
+        }
+
+        &-name {
+            line-height: $name-line-height;
+            margin-bottom: $name-margin-bottom;
+            font-size: $font-size-mobile;
+        }
+
+        .product-price-component-regular,
+        .product-price-component-minimum,
+        .product-price-component-final {
+            .product-price-component-regular-value,
+            .product-price-component-minimum-value,
+            .product-price-component-final-value,
+            .product-price-component-discounted-value {
+                font-size: $font-size-md;
+                letter-spacing: $price-letter-spacing;
+                line-height: 1;
+            }
+
+            .product-price-component-regular-value,
+            .product-price-component-minimum-value,
+            .product-price-component-final-value {
+                font-weight: $font-weight-bold;
+            }
+
+            .product-price-component-discounted-value {
+                font-weight: $font-weight-normal;
+            }
+        }
+
+        .variation-plain-component {
+            display: none;
+        }
+    }
+}

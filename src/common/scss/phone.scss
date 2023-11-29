@@ -1,0 +1,50 @@
+@import './variables';
+
+.phone-component {
+    $phone-component-width: 4rem;
+    $phone-component-padding-left: 5rem;
+    $phone-prefix-content-id: '+62';
+    $phone-prefix-content-ph: '+63';
+    $phone-prefix-top: 0.65rem;
+
+    .form-control-component {
+        &-secondary {
+            .form-label.active-label {
+                &::before {
+                    position: absolute;
+                    top: $phone-prefix-top;
+                    left: 0;
+                    width: $phone-component-width;
+                    font-weight: $input-font-weight;
+                    line-height: $input-line-height;
+                    color: $disabled-font-color;
+                    font-size: $font-size-md;
+                }
+            }
+
+            .form-label.active-label ~ .form-input-component {
+                padding-left: $phone-component-padding-left;
+            }
+        }
+    }
+
+    &-id .form-control-component {
+        &-secondary {
+            .form-label.active-label {
+                &::before {
+                    content: $phone-prefix-content-id;
+                }
+            }
+        }
+    }
+
+    &-ph .form-control-component {
+        &-secondary {
+            .form-label.active-label {
+                &::before {
+                    content: $phone-prefix-content-ph;
+                }
+            }
+        }
+    }
+}

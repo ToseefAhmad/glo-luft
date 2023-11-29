@@ -1,0 +1,25 @@
+@import '../../../common/scss/variables';
+
+.app {
+    $button-height: 5.3rem;
+
+    .cart-item-actions-component {
+        border: $border-width solid $gray-light-primary;
+
+        .button-component {
+            font-weight: $font-weight-bold;
+            font-size: $font-size-base;
+            height: $button-height;
+        }
+
+        &-remove.button-component {
+            color: $primary-font-color;
+        }
+
+        .button-component + .button-component {
+            &::after {
+                border-top: $border-width solid $gray-light-primary;
+            }
+        }
+    }
+}

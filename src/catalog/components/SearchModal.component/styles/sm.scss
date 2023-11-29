@@ -1,0 +1,26 @@
+@import '../../../../common/scss/variables';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(sm) {
+    .app {
+        $product-body-max-width: calc(100vw / 2 - 5.5rem - 2 * #{$m-primary-lg});
+
+        .search-modal-component {
+            &-results {
+                & {
+                    overflow-y: auto;
+                }
+
+                &-full {
+                    .product-preview-alt-component-body {
+                        max-width: $product-body-max-width;
+                    }
+                }
+            }
+
+            .product-list-component.container {
+                max-width: none;
+            }
+        }
+    }
+}

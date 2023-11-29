@@ -1,0 +1,25 @@
+@import '../../../../common/scss/variables';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(lg) {
+    .app {
+        $product-recent-body-max-width: 22rem;
+        $product-body-max-width: calc(128rem / 3 - 5.5rem - 3 * #{$m-primary-lg});
+
+        .search-modal-component {
+            &-results-full {
+                &.search-modal-component-recent-results {
+                    .product-preview-alt-component-body {
+                        max-width: $product-recent-body-max-width;
+                    }
+                }
+
+                &:not(.search-modal-component-recent-results) {
+                    .product-preview-alt-component-body {
+                        max-width: $product-body-max-width;
+                    }
+                }
+            }
+        }
+    }
+}

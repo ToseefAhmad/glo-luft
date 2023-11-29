@@ -1,0 +1,138 @@
+@import '../../../scss/variables';
+
+.app {
+    .navigation-component {
+        $open-icon-width: 2rem;
+        $open-icon-height: 2rem;
+        $close-icon-width: 1.5rem;
+        $close-icon-height: 1.6rem;
+        $logo-width: 5rem;
+        $logo-height: 4.2rem;
+        $toggle-component-margin-right: 1.6rem;
+        $navigation-content-height: 4rem;
+        $navbar-toggler-text-line-height: 1.2;
+
+        & {
+            height: $header-height-top-bar;
+            background-color: $dark;
+            max-width: $max-content-width;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0;
+        }
+
+        .navigation-component-content {
+            flex-grow: 1;
+            height: $navigation-content-height;
+
+            a {
+                order: 0;
+                z-index: $header-elements-z-index;
+            }
+
+            .navigation-component-toggle {
+                order: 1;
+                margin-left: auto;
+                z-index: $header-elements-z-index;
+            }
+        }
+
+        .navigation-component-content-text {
+            width: $logo-width;
+            height: $logo-height;
+            display: inline-block;
+            text-indent: -99999px;
+            background: center url('../../../resources/svg/glo-logo.svg') no-repeat;
+            background-size: $logo-width $logo-height;
+            padding: 0;
+            color: $tertiary;
+        }
+
+        .navigation-component-toggle {
+            margin-right: $toggle-component-margin-right;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            height: 100%;
+        }
+
+        .navigation-component-toggle .navbar-toggler-icon {
+            width: $close-icon-width;
+            height: $close-icon-height;
+            background-image: url('~bat-core/common/src/resources/svg/base/bat-close-white.svg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: $close-icon-width $close-icon-height;
+        }
+
+        .navigation-component-toggle .navbar-toggler-text {
+            color: $light;
+            font-size: $font-size-base;
+            line-height: $navbar-toggler-text-line-height;
+        }
+
+        .navigation-component-toggle.collapsed .navbar-toggler-icon {
+            width: $open-icon-width;
+            height: $open-icon-height;
+            background-image: url('../../../resources/svg/glo-menu.svg');
+            background-size: $open-icon-width $open-icon-height;
+        }
+
+        .navigation-component-controls {
+            flex-grow: 0;
+            align-items: center;
+        }
+
+        .cart-bar-component,
+        .account-nav-control-alt-component {
+            .button-component-secondary:not(:disabled):not(.disabled):active,
+            button:active,
+            button:focus {
+                box-shadow: none;
+                background-color: transparent;
+            }
+        }
+    }
+}
+
+.modal-component.navigation-modal-component {
+    $menu-overlay-background: rgba(0, 0, 0, 0.3);
+    $modal-content-height: calc(100vh - #{$header-height-top-bar});
+
+    & {
+        top: $header-height-top-bar;
+        height: auto;
+    }
+
+    .modal-header {
+        display: none;
+    }
+
+    .modal-body,
+    .modal-component-dialog {
+        background-color: transparent;
+    }
+
+    .modal-component-dialog {
+        width: 100%;
+        margin: 0;
+    }
+
+    .modal-content {
+        overflow-y: auto;
+        background-color: $menu-overlay-background;
+    }
+
+    .modal-full-screen .modal-content {
+        height: $modal-content-height;
+    }
+
+    .settings-nav-control-component-button {
+        font-weight: $font-weight-bold;
+
+        &:hover {
+            border-bottom-color: $primary-border-color;
+        }
+    }
+}

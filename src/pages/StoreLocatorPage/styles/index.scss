@@ -1,0 +1,14 @@
+@import '~bat-core/pages/StoreLocator/glo';
+
+.store-locator-page {
+    $padding-calc: calc((100vw - #{$max-content-width}) / 2);
+
+    & {
+        padding-left: $padding-calc;
+        background-color: $light;
+    }
+
+    &-body {
+        display: flex;
+    }
+}

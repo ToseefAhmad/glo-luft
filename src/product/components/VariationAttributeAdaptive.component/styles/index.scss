@@ -1,0 +1,131 @@
+@import '../../../../common/scss/variables';
+
+.variation-attribute-adaptive-component {
+    $self: &;
+    $hover-duration: 100ms;
+    $variation-attribute-padding: 0.6rem;
+    $variation-attribute-width: 7.5rem;
+    $variation-attribute-height: 4rem;
+    $variation-attribute-gap: 0.8rem;
+    $variation-attribute-name-font-size-small: 1rem;
+    $variation-attribute-name-font-size-large: 1.8rem;
+    $variation-attribute-margin-bottom: 0.3rem;
+    $variation-attribute-content-transform: 0.1rem;
+    $indicators-height: 1.9rem;
+    $indicators-margin-right: 0.3rem;
+    $indicator-width: 0.5rem;
+    $indicator-margin-right: 0.2rem;
+    $indicator-border-radius: 1rem;
+
+    & {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, $variation-attribute-width);
+        grid-auto-rows: minmax($variation-attribute-height, 1fr);
+        gap: $variation-attribute-gap;
+    }
+
+    &-value {
+        & {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: $border-width solid $gray-light-primary;
+            background-color: transparent;
+            padding: $variation-attribute-padding;
+            transition: background-color $hover-duration ease-in-out;
+        }
+
+        &:not(&-active) {
+            &:focus,
+            &:hover {
+                & {
+                    background-color: $gray-light-tertiary;
+                    color: $primary;
+                }
+
+                #{$self}-name {
+                    color: $primary;
+                }
+
+                #{$self}-indicator {
+                    border-color: $primary;
+                }
+
+                #{$self}-indicator-filled {
+                    background-color: $primary;
+                }
+            }
+
+            #{$self}-indicator-filled {
+                background-color: $primary;
+            }
+        }
+
+        &-active {
+            & {
+                background-color: $primary;
+                border-color: $primary;
+            }
+
+            #{$self} {
+                &-name {
+                    color: $light;
+                }
+
+                &-indicator {
+                    border-color: $light;
+                }
+
+                &-indicator-filled {
+                    background-color: $light;
+                }
+            }
+        }
+    }
+
+    &-content {
+        display: flex;
+        align-items: baseline;
+        // Fix the vertical centering
+        transform: translateY($variation-attribute-content-transform);
+    }
+
+    &-name {
+        & {
+            font-weight: $font-weight-semibold;
+            text-transform: uppercase;
+            color: $primary;
+            line-height: 1;
+            transition: color $hover-duration ease-in-out;
+        }
+
+        &-small {
+            font-size: $variation-attribute-name-font-size-small;
+        }
+
+        &-large {
+            font-size: $variation-attribute-name-font-size-large;
+        }
+    }
+
+    &-indicators {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        height: $indicators-height;
+        margin-right: $indicators-margin-right;
+    }
+
+    &-indicator {
+        & {
+            width: $indicator-width;
+            border-radius: $indicator-border-radius;
+            border: $border-width solid $primary;
+            transition: background-color $hover-duration ease-in-out, border-color $hover-duration ease-in-out;
+        }
+
+        &:not(:last-child) {
+            margin-right: $indicator-margin-right;
+        }
+    }
+}

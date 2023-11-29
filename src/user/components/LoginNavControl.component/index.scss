@@ -1,0 +1,20 @@
+@import '../../../common/scss/variables';
+
+.app {
+    .login-nav-control-component {
+        &-text {
+            color: $primary-font-color;
+            font-size: $font-size-md;
+        }
+
+        &-button {
+            font-weight: $font-weight-bold;
+            text-transform: uppercase;
+            transition: text-decoration-color 150ms ease;
+
+            &:hover {
+                text-decoration-color: transparent;
+            }
+        }
+    }
+}

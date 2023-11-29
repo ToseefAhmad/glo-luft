@@ -1,0 +1,107 @@
+@import '../../../../common/scss/variables';
+@import '~@luft/review/src/components/Reviews.component/index';
+@import '~bat-core/common/src/components/Button.component/styles/glo/index';
+@import '~bat-core/review/src/components/ReviewRating.component/styles/glo/index';
+@import '~bat-core/review/src/components/ReviewItem.component/styles/glo/index';
+@import '~bat-core/review/src/components/ReviewSummary.component/styles/glo/index';
+
+.reviews-component {
+    $total-font-size: 1.3rem;
+    $title-font-size: 2.6rem;
+    $total-font-weight: 500;
+    $title-padding: 3rem 0;
+    $review-border-color: #d8d8d8;
+    $reviews-header-background-color: #f7f7f7;
+    $rating-starts-margin: 0 0.8rem 0 0.6rem;
+
+    & {
+        background-color: $light;
+        margin-bottom: $m-primary-lg;
+    }
+
+    &-title {
+        padding: $title-padding;
+        font-size: $title-font-size;
+        font-weight: $font-weight-extrabold;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    &-header {
+        flex-direction: column;
+        margin: 0 $m-primary;
+        padding-top: $p-primary;
+        border: $border-width solid $review-border-color;
+        background-color: $reviews-header-background-color;
+        font-size: $font-size-lg;
+    }
+
+    &-list {
+        margin: 0 $m-primary;
+        border: $border-width solid $review-border-color;
+        border-top: none;
+    }
+
+    &-load-more {
+        margin: 0 $m-primary;
+        padding: $p-primary 0;
+        border-top: $border-width solid $review-border-color;
+    }
+
+    &-load-more-action.button-component {
+        & {
+            background-color: transparent;
+            background-image: none;
+            color: $primary;
+            font-size: $font-size-lg;
+            font-weight: $font-weight-bold;
+            letter-spacing: unset;
+            text-decoration: underline;
+            text-transform: uppercase;
+            padding: 0;
+        }
+
+        &:hover {
+            background-color: transparent;
+            text-decoration: none;
+        }
+
+        &:active,
+        &:not(:disabled):not(.disabled):active,
+        &:not(:disabled):not(.disabled):active:focus,
+        &:focus {
+            box-shadow: none;
+            color: $primary;
+        }
+    }
+
+    &-rating {
+        order: 2;
+        text-transform: uppercase;
+    }
+
+    &-rating-stars {
+        margin: $rating-starts-margin;
+    }
+
+    &-total {
+        order: 1;
+        font-size: $font-size-lg;
+    }
+
+    &-header-actions {
+        order: 3;
+    }
+
+    &-header-actions &-header-action.button-component {
+        padding-top: $p-secondary;
+        font-size: $font-size-lg;
+        text-transform: uppercase;
+        font-weight: $font-weight-bold;
+
+        &:focus {
+            box-shadow: none;
+            text-decoration: underline;
+        }
+    }
+}

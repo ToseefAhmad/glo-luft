@@ -1,0 +1,22 @@
+@import '../../../../common/scss/variables';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(md) {
+    .app {
+        .order-details-box-component {
+            $title-letter-spacing: 0.02rem;
+            $title-line-height: 1.25;
+
+            & {
+                padding-top: $p-secondary;
+                padding-bottom: $p-secondary;
+            }
+
+            &-title {
+                font-size: $font-size-md;
+                letter-spacing: $title-letter-spacing;
+                line-height: $title-line-height;
+            }
+        }
+    }
+}

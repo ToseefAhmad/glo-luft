@@ -1,0 +1,33 @@
+@import '~@luft/common/src/scss/mixins';
+@import '../../../../common/scss/variables';
+
+@include media-breakpoint-up(md) {
+    .app {
+        .checkout-payment-method-step-component {
+            $holder-height: 6rem;
+            $body-padding-right: 4.6rem;
+
+            &-preview {
+                & {
+                    padding-top: $p-secondary;
+                }
+
+                .checkout-step-preview-component {
+                    &-holder {
+                        height: $holder-height;
+                        padding: 0;
+                    }
+
+                    &-preview {
+                        padding: 0;
+                    }
+
+                    &-body {
+                        height: 100%;
+                        padding-right: $body-padding-right;
+                    }
+                }
+            }
+        }
+    }
+}

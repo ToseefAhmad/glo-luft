@@ -1,0 +1,5 @@
+#import "bat-core/user/src/graphql/fragments/BatAddress.fragment.graphql"
+
+fragment AddressFragment on Address {
+    ...BatAddressFragment
+}

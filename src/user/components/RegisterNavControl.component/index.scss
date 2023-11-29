@@ -1,0 +1,22 @@
+@import '../../../common/scss/variables';
+@import '~bat-core/common/src/components/Button.component/styles/glo/index';
+
+.app {
+    .register-nav-control-component {
+        &-text {
+            color: $primary-font-color;
+            font-size: $font-size-md;
+        }
+
+        &-button.button-component {
+            font-size: $font-size-md;
+            font-weight: $font-weight-bold;
+            text-transform: uppercase;
+            transition: text-decoration-color 150ms ease;
+
+            &:hover {
+                text-decoration-color: transparent;
+            }
+        }
+    }
+}

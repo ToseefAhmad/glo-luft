@@ -1,0 +1,82 @@
+@import '../../../../common/scss/variables';
+
+.modal-component.navigation-modal-component {
+    .modal-content {
+        background-color: $dark;
+    }
+
+    .modal-body {
+        background-color: $dark-secondary;
+    }
+
+    .menu-categories-component {
+        $categories-icon-background-size: 1.4rem 0.9rem;
+        $accordion-toggle-padding: 1.8rem $p-primary;
+
+        &-toggle.accordion-toggle.button-component {
+            background-image: url('../../../../common/resources/svg/glo-arrow-down.svg');
+            background-size: $categories-icon-background-size;
+            border-top: 1px solid $primary-border-color;
+        }
+
+        &-toggle.accordion-toggle.button-component.accordion-toggle-collapse-show {
+            background-image: url('../../../../common/resources/svg/glo-arrow-up.svg');
+        }
+
+        &-collapse {
+            border-top: 1px solid $primary-border-color;
+        }
+
+        .accordion-toggle-component.button-component {
+            & {
+                padding: $accordion-toggle-padding;
+            }
+
+            &:focus {
+                box-shadow: none;
+            }
+        }
+
+        &-category,
+        &-category-active,
+        &-category-active.accordion-toggle.button-component {
+            &,
+            &:active,
+            &:active:focus,
+            &:hover,
+            &:not(:disabled):not(.disabled):active,
+            &:not(:disabled):not(.disabled):active:focus {
+                color: $light;
+            }
+        }
+
+        .menu-categories-component {
+            &-category {
+                border: none;
+            }
+
+            & > div + div > .menu-categories-component-category {
+                border-top: 1px solid $primary-border-color;
+            }
+        }
+    }
+
+    .button-component {
+        &,
+        &:focus,
+        &:hover,
+        &:not(:disabled):not(.disabled):active,
+        &:not(:disabled):not(.disabled):active:focus,
+        &-navigation {
+            color: $light;
+            box-shadow: none;
+        }
+    }
+
+    .modal-body {
+        .button-component,
+        .menu-categories-component {
+            font-size: $font-size-base;
+        }
+    }
+}

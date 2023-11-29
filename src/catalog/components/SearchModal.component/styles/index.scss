@@ -1,0 +1,164 @@
+@import '../../../../common/scss/variables';
+@import '~bat-core/common/src/scss/grid/index';
+@import '~bat-core/catalog/src/components/SearchModal.component/styles/glo/index';
+@import '../../../../product/components/ProductList.component/index';
+@import '../../RecommendedCategory.component/index';
+@import '../../RecentSearches.component/index';
+
+.app {
+    .search-modal-component {
+        $search-form-height: 4rem;
+        $search-results-max-height: calc((var(--vh, 1vh) * 100) - #{$header-height-top-bar + $search-form-height});
+        $search-results-title-padding: 2.3rem $p-primary $p-primary;
+        $search-results-list-padding: 0 $p-primary 2.3rem;
+        $search-result-link-image-width: 5.5rem;
+        $search-result-preview-body-width: 80%;
+        $more-icon-width: 2rem;
+        $more-icon-height: 1.4rem;
+        $more-icon-margin-bottom: 0.02rem;
+        $more-button-line-height: 3.4rem;
+        $recently-viewed-padding: 2.3rem $p-primary $p-primary;
+        $product-body-max-width: calc(100vw - #{$search-result-link-image-width} - 2 * #{$m-primary-lg});
+
+        &-results {
+            & {
+                max-width: none;
+                padding-bottom: 0;
+                max-height: $search-results-max-height;
+            }
+
+            &-empty {
+                .search-modal-component-results-list {
+                    flex-direction: column;
+                    align-items: initial;
+                }
+            }
+
+            &-full {
+                .product-preview-alt-component {
+                    & {
+                        flex-direction: row;
+                    }
+
+                    &-link-image {
+                        flex: 0 0 $search-result-link-image-width;
+                        margin-right: $m-secondary;
+                    }
+
+                    &-body {
+                        flex-basis: $search-result-preview-body-width;
+                        padding: 0;
+                        max-width: $product-body-max-width;
+                    }
+
+                    &-link-name {
+                        font-size: $font-size-mobile;
+                    }
+                }
+            }
+        }
+
+        &-results-list {
+            padding: $search-results-list-padding;
+        }
+
+        &-results-title {
+            font-size: $font-size-mobile;
+            padding: $search-results-title-padding;
+        }
+
+        .recent-viewed-product-component {
+            & {
+                border-top: none;
+                padding: $recently-viewed-padding;
+            }
+
+            &-title {
+                padding: 0 0 $p-primary;
+                font-size: $font-size-mobile;
+            }
+
+            .loader-component {
+                height: auto;
+            }
+        }
+
+        &-more {
+            border: none;
+            height: auto;
+        }
+
+        &-more-button.button-component {
+            & {
+                line-height: $more-button-line-height;
+                padding: 0 $p-primary;
+            }
+
+            &,
+            &:hover,
+            &:active,
+            &:focus,
+            &:not(:disabled):not(.disabled):active:focus {
+                color: $light;
+                background: $dark-secondary;
+                box-shadow: none;
+            }
+
+            &::after {
+                background-image: url('../../../../common/resources/svg/glo-arrow-right-white.svg');
+                background-size: $more-icon-width $more-icon-height;
+                background-repeat: no-repeat;
+                content: '';
+                width: $more-icon-width;
+                height: $more-icon-height;
+                display: inline-block;
+                vertical-align: middle;
+                margin-left: $m-secondary;
+                margin-bottom: $more-icon-margin-bottom;
+            }
+        }
+
+        .product-price-component {
+            & {
+                margin-bottom: $m-primary-lg;
+            }
+
+            &,
+            &-regular-value,
+            &-final-value,
+            &-discounted-value,
+            &-minimum-value {
+                font-size: $font-size-mobile;
+            }
+
+            &-regular-value,
+            &-discounted-value,
+            &-minimum-value,
+            &-minimum-label {
+                color: $primary-font-color;
+            }
+
+            .product-price-component-final-value {
+                color: $final-price-color;
+            }
+
+            &-final {
+                flex-direction: row;
+            }
+        }
+
+        .product-list-component.container {
+            padding: 0;
+            display: block;
+        }
+
+        .product-list-component .alert-component-info {
+            color: $primary;
+        }
+
+        .product-preview-alt-component-footer,
+        .variation-attributes-component {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,26 @@
+@import '../../../common/scss/variables';
+@import '~@luft/user/src/components/ResetPassword.component/index';
+
+.app {
+    .reset-password-component {
+        $wrapper-title-padding: 1.5rem $p-primary 1.4rem;
+        $notification-max-width: 80%;
+
+        &-wrapper-title {
+            border-color: $gray-light-primary;
+            padding: $wrapper-title-padding;
+            min-height: auto;
+            font-weight: $font-weight-extrabold;
+            text-transform: uppercase;
+        }
+
+        &-notification {
+            max-width: $notification-max-width;
+            margin: $m-primary auto;
+        }
+
+        .form-group {
+            margin-bottom: 0;
+        }
+    }
+}

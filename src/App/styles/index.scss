@@ -1,0 +1,56 @@
+@import '../../common/scss/variables';
+// TODO: Delete after CartItem.component styles will be moved to bat-core and imported in MiniCart.component
+@import '../../cart/components/CartItem.component/index';
+@import '../../push-notification/components/PushNotificationModal.component/index';
+@import '~@luft/common/src/components/OfflineBar.component/index';
+@import '~@luft/common/src/components/Navigation.component/index';
+@import '~@luft/user/src/components/SettingsNavControl.component/index';
+@import '~@luft/common/src/components/Toast.component/index';
+@import '~bat-core/cart/src/components/MiniCartTransition.component/styles/glo/index';
+
+.app {
+    $content-min-height: calc(100vh - #{$header-height});
+    $global-message-padding: 0.4rem $p-secondary;
+    $shipping-notes-font-size: 1.4rem;
+    $shipping-notes-max-width: 66.4rem;
+
+    & {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &-content {
+        min-height: $content-min-height;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        flex-grow: 1;
+    }
+
+    .toast-component {
+        top: $height-base + $m-secondary;
+    }
+
+    .top-global-message {
+        margin-bottom: 0 !important;
+        padding: $global-message-padding !important;
+    }
+
+    .app-footer {
+        background-color: $primary !important;
+    }
+
+    .shipping-notes {
+        & {
+            padding: $p-primary;
+            margin-bottom: $m-secondary;
+            font-size: $shipping-notes-font-size;
+            max-width: $shipping-notes-max-width;
+        }
+
+        &-title {
+            font-size: $shipping-notes-font-size;
+            font-weight: $font-weight-bold;
+        }
+    }
+}

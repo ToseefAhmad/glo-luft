@@ -1,0 +1,21 @@
+@import '../../../common/scss/variables';
+
+.modal-component {
+    .settings-nav-control-component {
+        $button-padding-y: 1.8rem;
+
+        &-button.button-component {
+            background-image: url(../../../common/resources/svg/glo-wheel.svg);
+            background-color: $dark-secondary;
+            padding-top: $button-padding-y;
+            padding-bottom: $button-padding-y;
+            border: none;
+            border-bottom: $border-width solid $dark-grey;
+
+            &:not(:disabled):not(.disabled):active {
+                background-color: $dark-secondary;
+                border-color: $dark-grey;
+            }
+        }
+    }
+}

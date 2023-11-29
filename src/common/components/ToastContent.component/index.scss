@@ -1,0 +1,12 @@
+.app {
+    .toast-content-component {
+        & {
+            padding-left: 35px;
+        }
+
+        &::before,
+        &::after {
+            width: 25px;
+        }
+    }
+}

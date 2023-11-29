@@ -1,0 +1,24 @@
+@import '../../../../common/scss/variables';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-down(sm) {
+    .app .product-description-component {
+        &-column {
+            flex-basis: 50%;
+        }
+
+        &-title {
+            text-align: center;
+        }
+    }
+}
+
+@include media-breakpoint-up(sm) {
+    .app .product-description-component {
+        $product-description-padding: 3rem 6rem 0;
+
+        & {
+            padding: $product-description-padding;
+        }
+    }
+}

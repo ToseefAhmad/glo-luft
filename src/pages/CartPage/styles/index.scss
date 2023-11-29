@@ -1,0 +1,10 @@
+@import '../../../common/scss/variables';
+@import '../../../cart/components/Cart.component/index';
+@import '~@luft/cart/src/components/Cart.component/index';
+
+.cart-page {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    background: $page-bg;
+}

@@ -1,0 +1,7 @@
+fragment EntityUrlFragment on EntityUrl {
+    id
+    url
+    entity_id
+    entity_type
+    redirect_url
+}

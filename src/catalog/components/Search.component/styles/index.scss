@@ -1,0 +1,131 @@
+@import '../../../../common/scss/variables';
+@import '../../SearchModal.component/index';
+
+.app {
+    .search-component {
+        $search-component-button-line-height: 1.2;
+        $search-component-button-height: 4rem;
+        $search-component-form-zindex: 1021;
+        $search-component-form-input-height: 4rem;
+        $search-component-form-content-icon-width: 4rem;
+        $search-component-form-content-icon-right: 0.5rem;
+        $search-component-form-content-icon-size: 1.6rem 1.6rem;
+
+        & {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            z-index: 0;
+            transition: top 1500ms ease, transform 1500ms ease;
+        }
+
+        &-hidden {
+            top: 0;
+        }
+
+        &-button {
+            & {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                height: $search-component-button-height;
+                z-index: $header-elements-z-index;
+                padding: 0;
+                border: none;
+                background-image: url('../../../../common/resources/svg/glo-search.svg');
+                background-repeat: no-repeat;
+                background-position: 50% 0;
+                background-size: $search-component-form-content-icon-size;
+            }
+
+            &,
+            &:hover,
+            &:active,
+            &:focus,
+            &:not(:disabled):not(.disabled):active:focus {
+                box-shadow: none;
+            }
+
+            &-text {
+                color: $light;
+                line-height: $search-component-button-line-height;
+                text-transform: capitalize;
+                font-size: $font-size-base;
+                font-weight: $font-weight-normal;
+            }
+        }
+
+        &-form {
+            & {
+                border: none;
+                background: $dark-secondary;
+                position: relative;
+                z-index: $search-component-form-zindex;
+            }
+
+            &-content {
+                position: relative;
+                display: flex;
+                align-items: center;
+            }
+
+            &-content-input.input-component {
+                background: $dark-secondary;
+                border: none;
+                color: $light;
+                height: $search-component-form-input-height;
+                font-size: $font-size-lg;
+                padding-right: $p-primary-lg;
+            }
+
+            &-content-input:focus {
+                box-shadow: none;
+            }
+
+            &-content-icon {
+                background-image: url('~bat-core/common/src/resources/svg/base/bat-close-white.svg');
+            }
+
+            &-content-icon.button-component.button-component-secondary.button-component-lg:not(:disabled):not(.disabled):active {
+                box-shadow: none;
+            }
+
+            &-content-icon.button-component {
+                & {
+                    position: absolute;
+                    width: $search-component-form-content-icon-width;
+                    right: $search-component-form-content-icon-right;
+                    background-color: transparent;
+                    background-position: 50%;
+                    background-repeat: no-repeat;
+                    background-size: $search-component-form-content-icon-size;
+                    border: none;
+                }
+
+                &,
+                &:hover,
+                &:active,
+                &:focus,
+                &:not(:disabled):not(.disabled):active:focus {
+                    box-shadow: none;
+                    background-color: transparent;
+                }
+
+                &.icon-search {
+                    & {
+                        background-image: url('../../../../common/resources/svg/glo-search.svg');
+                    }
+
+                    &:hover {
+                        background-position: center;
+                    }
+                }
+
+                &.icon-close {
+                    background-image: url('~bat-core/common/src/resources/svg/base/bat-close-white.svg');
+                }
+            }
+        }
+    }
+}

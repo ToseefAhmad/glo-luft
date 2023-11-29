@@ -1,0 +1,12 @@
+@import '../../scss/variables';
+
+.app,
+.modal-component {
+    .validation-error-component {
+        padding-top: $p-secondary;
+        font-size: $font-size-base;
+        font-weight: $font-weight-normal;
+        color: $danger;
+        margin: 0;
+    }
+}

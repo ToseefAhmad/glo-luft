@@ -1,0 +1,37 @@
+@import '../../../../common/scss/variables';
+@import '../../SocialProviders.component/index';
+@import '~bat-core/restrict-access/src/components/AgeVerificationModal.component/styles/glo/index';
+@import '~bat-core/common/src/components/Back.component/styles/glo/index';
+@import '~@luft/user/src/components/Register.component/index';
+
+.app {
+    .register-component {
+        $age-verify-background-color: #ccf4ef;
+
+        .back-component-control-title {
+            font-weight: $font-weight-bold;
+        }
+
+        &-age {
+            margin: $m-primary;
+            padding: $p-primary;
+            background-color: $age-verify-background-color;
+            font-size: $font-size-md;
+            text-align: center;
+        }
+
+        &-verify-name {
+            padding: $p-secondary 0 $p-tertiary;
+            font-weight: $font-weight-bold;
+        }
+
+        &-verify-text {
+            margin-bottom: 0;
+        }
+
+        &-reverify {
+            padding: 0 $p-tertiary;
+            text-decoration: underline;
+        }
+    }
+}

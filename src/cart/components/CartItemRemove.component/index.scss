@@ -1,0 +1,11 @@
+@import '../../../common/scss/variables';
+
+.app,
+.modal-component {
+    .cart-item-remove-component {
+        .modal-content,
+        .modal-body {
+            background: $light;
+        } 
+    }
+}

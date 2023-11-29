@@ -1,0 +1,30 @@
+@import '../../../../common/scss/variables';
+
+.app {
+    .checkout-contact-info-component {
+        $social-login-margin-bottom: 4rem;
+
+        .back-component-control-title {
+            font-weight: $font-weight-bold;
+        }
+
+        &-body-message {
+            align-items: center;
+            padding: 0;
+            margin-top: $m-primary;
+        }
+
+        &-body-message-text,
+        &-login-link {
+            color: $primary;
+        }
+
+        &-login-link {
+            text-transform: uppercase;
+        }
+
+        .social-providers-component {
+            margin-bottom: $social-login-margin-bottom;
+        }
+    }
+}

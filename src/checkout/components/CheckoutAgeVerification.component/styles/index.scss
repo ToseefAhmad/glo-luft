@@ -1,0 +1,77 @@
+@import '../../../../common/scss/variables';
+
+.checkout-age-verification-component {
+    $component-validated-background-color: #ccf4ef;
+    $icon-holder-width: 2.3rem;
+    $icon-size: 1.6rem 1.6rem;
+    $button-min-width: 11rem;
+    $title-font-size: 1.3rem;
+
+    & {
+        position: relative;
+        padding: $p-primary;
+        margin-top: $m-primary;
+        background-color: $light;
+    }
+
+    &.validated {
+        display: flex;
+        background-color: $component-validated-background-color;
+
+        &::before {
+            content: '';
+            display: block;
+            width: $icon-holder-width;
+            height: $icon-holder-width;
+            background: left top no-repeat url('~bat-core/common/src/resources/svg/base/bat-success.svg');
+            background-size: $icon-size $icon-size;
+        }
+    }
+
+    &-title {
+        font-size: $title-font-size;
+        margin-bottom: $m-primary;
+    }
+
+    &.validated .checkout-age-verification-component-title {
+        font-weight: $font-weight-bold;
+    }
+
+    &-body {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &.validated .checkout-age-verification-component-body {
+        flex-direction: column;
+    }
+
+    &-code,
+    &-input.form-group-component {
+        flex-grow: 1;
+        margin: 0 $m-secondary 0 0;
+    }
+
+    &-input.form-group-component .form-group {
+        margin: 0;
+    }
+
+    .form-group {
+        margin-bottom: 0;
+    }
+
+    &-code {
+        display: flex;
+        align-items: center;
+    }
+
+    &-code-value {
+        padding-left: $p-tertiary;
+        font-weight: $font-weight-semibold;
+        color: $primary;
+    }
+
+    &-submit {
+        min-width: $button-min-width;
+    }
+}

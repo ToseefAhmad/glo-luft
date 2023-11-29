@@ -1,0 +1,7 @@
+{
+  "restrict-access.components.RestrictAccess.component.agree": "I am 21 or over",
+  "restrict-access.components.RestrictAccess.component.disagree": "I am under 21",
+  "restrict-access.components.RestrictAccess.component.notice": "*21+ only. This product contains nicotine and is addictive.\nFor adult nicotine or tobacco consumers only.",
+  "restrict-access.components.RestrictAccess.component.text": "Please verify your age before entering the site*",
+  "restrict-access.components.RestrictAccess.component.title": "To use this website you must be aged\n21 years or over"
+}

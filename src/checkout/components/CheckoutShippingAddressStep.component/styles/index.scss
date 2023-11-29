@@ -1,0 +1,23 @@
+@import '../../../../common/scss/variables';
+
+.app {
+    .checkout-shipping-address-step-component {
+        &-preview {
+            &.checkout-step-preview-component {
+                padding: $p-primary;
+            }
+
+            .checkout-step-preview-component {
+                &-body {
+                    padding-left: 0;
+                    background-position: center right;
+                }
+
+                &-preview {
+                    padding-top: 0;
+                    padding-bottom: 0;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,86 @@
+@import '../../../../common/scss/variables';
+@import '../../../../user/components/SocialProviders.component/index';
+
+.app {
+    $block-body-max-width: 43.5rem;
+    $block-max-width: 68rem;
+    $success-body-max-width: 44rem;
+    $success-block-height: 23.8rem;
+    $success-block-top-margin: 7rem;
+    $success-block-bottom-margin: 7rem;
+    $social-providers-component-margin: 3rem 0 0;
+    $font-size-title: 2.6rem;
+    $success-confirmation-margin: 3rem;
+    $success-cms-block-margin: 0 -#{$m-primary};
+    $success-cms-margin: 0 auto 6rem;
+    $success-cms-max-width: 144rem;
+    $success-cms-item-margin-left: 0.7rem;
+
+    .checkout-success-component {
+        & {
+            background-color: $page-bg;
+            height: 100%;
+            padding-top: 0;
+        }
+
+        &-body {
+            max-width: $success-body-max-width;
+        }
+
+        &-block {
+            max-width: $block-max-width;
+        }
+
+        .social-providers-component {
+            margin: $social-providers-component-margin;
+        }
+
+        .social-providers-component-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .checkout-success-component-block {
+            display: flex;
+            align-items: center;
+            margin-top: $success-block-top-margin;
+            margin-bottom: $success-block-bottom-margin;
+            min-height: $success-block-height;
+        }
+
+        .checkout-success-component-confirmation {
+            margin-bottom: $success-confirmation-margin;
+            font-size: $h4-font-size;
+        }
+
+        .checkout-success-component-block-title {
+            font-weight: $font-weight-extrabold;
+            font-size: $font-size-title;
+            text-transform: uppercase;
+        }
+
+        .checkout-success-component-order {
+            font-size: $font-size-md;
+        }
+
+        .checkout-success-component-continue {
+            max-width: $block-body-max-width;
+            margin: auto;
+        }
+
+        .cms-block-component {
+            margin: $success-cms-block-margin;
+        }
+    }
+
+    .success-cms-block {
+        & > div {
+            margin: $success-cms-margin;
+            max-width: $success-cms-max-width;
+            padding: 0 $p-primary;
+        }
+
+        .pagebuilder-column + .pagebuilder-column {
+            margin-left: $success-cms-item-margin-left !important; // Override inline style
+        }
+    }
+}

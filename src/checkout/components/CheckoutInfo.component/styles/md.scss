@@ -1,0 +1,82 @@
+@import '../../../../common/scss/variables';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(md) {
+    .app {
+        .checkout-info-component {
+            $step-title-height: 6rem;
+            $title-font-size: 2rem;
+            $shipping-box-title-padding-top: 2.3rem;
+            $shipping-box-title-padding-bottom: 3rem;
+            $payment-box-title-padding-bottom: 2.3rem;
+            $billing-address-as-shipping-block-height: 6rem;
+
+            &-step-title {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: $step-title-height;
+            }
+
+            &-step-checkout-discounts {
+                .checkout-discounts-component-accordion .accordion-toggle.button-component {
+                    border-top: 0;
+                }
+            }
+
+            &-contact-info-box {
+                .checkout-contact-info-component {
+                    padding-top: 0;
+                }
+            }
+
+            &-shipping-box,
+            &-payment-box {
+                .box-component-title {
+                    line-height: 1;
+                    padding-top: $shipping-box-title-padding-top;
+                    font-size: $title-font-size;
+                }
+            }
+
+            &-shipping-box {
+                .box-component-title {
+                    padding-bottom: $shipping-box-title-padding-bottom;
+                }
+            }
+
+            &-payment-box {
+                .box-component-title {
+                    padding-bottom: $payment-box-title-padding-bottom;
+                }
+            }
+
+            .billing-address-as-shipping-component {
+                height: $billing-address-as-shipping-block-height;
+                padding: $p-secondary $p-primary;
+            }
+
+            &-body-total {
+                margin-top: 0;
+                order: 2;
+                flex-shrink: 0;
+                width: $total-column-width;
+            }
+
+            &-body-total-title {
+                font-size: $title-font-size;
+            }
+
+            &-header-wrapper {
+                background-color: $light;
+                border-bottom: $border-width solid $gray-light-primary;
+            }
+
+            .cart-header-component {
+                max-width: $max-content-width;
+                margin: auto;
+                border: none;
+            }
+        }
+    }
+}

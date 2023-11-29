@@ -1,0 +1,17 @@
+@import '../../../common/scss/variables';
+@import '../../../gift-card/components/GiftCardCart.component/index';
+@import '../Coupon.component/index';
+@import '~@luft/checkout/src/components/CheckoutAppliedDiscounts.component/index';
+@import '~bat-core/common/src/components/AppliedDiscountItem.component/styles/glo/index';
+
+.app {
+    .checkout-applied-discounts-component {
+        $applied-coupouns-color: #ccf4ef;
+        $block-padding-right: 3.2rem;
+
+        &-coupons.coupon-applied-items-component {
+            background-color: $applied-coupouns-color;
+            padding-right: $block-padding-right;
+        }
+    }
+}

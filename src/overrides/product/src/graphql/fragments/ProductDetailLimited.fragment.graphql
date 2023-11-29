@@ -1,0 +1,26 @@
+#import "@luft/product/src/graphql/fragments/ProductPrice.fragment.graphql"
+#import "bat-core/product/src/graphql/fragments/ProductAttribute.fragment.graphql"
+
+fragment ProductDetailLimitedFragment on Product {
+    id
+    name
+    type
+    sku
+    thumbnail_image {
+        id
+        alt
+        name
+        url
+    }
+    price {
+        ...ProductPriceFragment
+    }
+    inventory {
+        in_stock
+        qty
+    }
+    url
+    product_attributes {
+        ...ProductAttributeFragment
+    }
+}

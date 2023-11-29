@@ -1,0 +1,67 @@
+@import '../../../../common/scss/variables';
+
+.app {
+    .checkout-step-preview-component {
+        $arrow-icon-size: 0.9rem 1.4rem;
+        $placeholder-font-size: 1.3rem;
+        $active-preview-padding: 2.6rem 0;
+        $body-padding-right: 2.6rem;
+        $address-preview-line-height: 1.43;
+        $preview-component-button-width: 8rem;
+        $preview-component-button-height: 4rem;
+        $preview-component-button-line-height: 0.5rem;
+
+        &.checkout-step-preview-component-active {
+            .checkout-step-preview-component-holder {
+                border-width: $secondary-border-width;
+            }
+        }
+
+        &-control {
+            &.button-component {
+                padding: 0;
+                margin: 0;
+                width: $preview-component-button-width;
+                height: $preview-component-button-height;
+                line-height: $preview-component-button-line-height;
+            }
+        }
+
+        &-body {
+            background-image: url('../../../../common/resources/svg/glo-arrow-right.svg');
+            background-size: $arrow-icon-size;
+            padding-right: $body-padding-right;
+        }
+
+        &-preview {
+            & {
+                padding: $p-primary 0;
+            }
+
+            &-placeholder {
+                font-size: $placeholder-font-size;
+                color: $primary-border-color;
+                line-height: 1;
+            }
+        }
+
+        &-icon-holder {
+            display: flex;
+            align-items: center;
+        }
+
+        &-icon-mail {
+            mask-image: url('../../../../common/resources/svg/glo-mail.svg');
+            margin: 0;
+        }
+
+        .address-preview-component {
+            font-size: $font-size-md;
+            line-height: $address-preview-line-height;
+
+            &-name {
+                font-weight: $font-weight-normal;
+            }
+        }
+    }
+}

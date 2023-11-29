@@ -1,0 +1,9 @@
+@import '../../../../common/scss/variables';
+
+.app {
+    .payment-method-preview-component {
+        $text-font-size: 1.3rem;
+
+        font-size: $text-font-size;
+    }
+}
